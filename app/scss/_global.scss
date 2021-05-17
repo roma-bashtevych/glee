@@ -1,0 +1,10 @@
+body{
+@extend %dmsans-500;
+background-color: $backgroundColor;
+}
+
+.container{
+  max-width: 1800px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
