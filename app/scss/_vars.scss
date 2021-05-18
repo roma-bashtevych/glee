@@ -1,15 +1,21 @@
 $backgroundColor: #ffffff;
 $menu: #436372;
 $title: #1a1a1a;
-$search-icon: rgba(163, 187, 200, 0.2);
+$search-icon-opacity: rgba(163, 187, 200, 0.2);
 $slider-bg: #fcd7b6;
 $buttonColor: #a3bbc8;
+
+$sliderTitle: #243f4d;
+$slick-bg-opacity: rgba(255, 255, 255, 0.3);
+$sliderLine: rgba(14%, 25%, 30%, 0.1);
+$sliderSubtitle: #414141;
+$sliderInfo: #585858;
 
 
 $footerTitle: #1f2044;
 $footerText: #7b7b7b;
 $placeholderColor: #234969;
-$input-bg: rgba(252, 215, 182, 0.2);
+$input-bg-opacity: rgba(252, 215, 182, 0.2);
 
 %dmsans-400{
    font-family: 'DMSans-Regular',

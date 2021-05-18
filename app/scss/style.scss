@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .menu {
@@ -48,13 +49,13 @@
     &--search {
       height: 51px;
       width: 52px;
-      background-color: $search-icon;
+      background-color: $search-icon-opacity;
     }
 
     &--double {
       width: 178px;
       height: 51px;
-      border-radius: 40px;
+      border-radius: 25px;
       background-color: $slider-bg;
     }
 
@@ -202,7 +203,7 @@
 
   &__input {
     border: none;
-    background-color: $input-bg;
+    background-color: $input-bg-opacity;
     padding: 0 16px;
     color: $placeholderColor;
     font-size: 12px;
@@ -230,6 +231,177 @@
     }
   }
 }
+
+.slider {
+  &__wrapper {
+    background-color: $slider-bg;
+    position: relative;
+
+    &::before {
+      content: "";
+      background-image: url('../images/slider/gradient_slider.png');
+      background-repeat: no-repeat;
+      width: 622px;
+      height: 634px;
+      padding-right: 185px;
+      position: absolute;
+      top: 99px;
+      right: 185px;
+    }
+  }
+
+  &__inner {
+    min-height: 820px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 225px;
+    @extend %rubik-500;
+  }
+
+  &__content {
+    max-width: 408px;
+    margin-right: 123px;
+  }
+
+  &__title {
+    font-size: 72px;
+    line-height: 1;
+    color: $sliderTitle;
+    margin-bottom: 45px;
+  }
+
+  &__content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: $menu;
+    margin-bottom: 40px;
+    max-width: 380px
+  }
+
+  &__button {
+    font-size: 15px;
+    line-height: 1;
+    width: 200px;
+    height: 60px;
+    background-color: $buttonColor;
+    color: $backgroundColor;
+    border: none;
+    position: relative;
+    padding-right: 60px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 26px;
+      right: 19px;
+      background-image: url('../images/slider/arrow.svg');
+      background-repeat: no-repeat;
+      width: 22px;
+      height: 9px;
+    }
+  }
+
+  &__bottom {
+    background-color: $input-bg-opacity;
+    display: flex;
+    justify-content: space-between;
+    min-height: 171px;
+  }
+
+  &__info {
+    max-width: 33.33%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   }
+
+  &__elem {
+  
+    max-width: 293px;
+    margin: 0 auto;
+    padding-left: 80px;
+    margin-right: auto;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 0;
+      background-repeat: no-repeat;
+      width: 50px;
+    }
+
+    &--hour::before {
+      background-image: url('../images/slider/slider-icon1.svg');
+      height: 50px;
+    }
+
+    &--deliver::before {
+      background-image: url('../images/slider/slider-icon2.svg');
+      height: 30px;
+    }
+
+    &--card::before {
+      background-image: url('../images/slider/slider-icon3.svg');
+      height: 450px;
+    }
+  }
+
+  &__info:not(:last-child) {
+    border-right: 1px solid $sliderLine;
+  }
+
+  &__subtitle {
+    color: $sliderSubtitle;
+    @extend %dmsans-700;
+    font-size: 18px;
+    line-height: 2.2;
+  }
+
+  &__info p {
+    color: $sliderInfo;
+    @extend %dmsans-400;
+    font-size: 16px;
+    line-height: 1.9;
+  }
+}
+
+.slick-dots {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  bottom: 45px;
+  transform: translateX(-50%);
+
+  & li:not(:last-child) {
+    margin-right: 11px;
+  }
+
+  & button {
+    font-size: 11px;
+    line-height: 1;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    color: $sliderTitle;
+    background-color: $slick-bg-opacity;
+    transition: background-color 0.5s ease;
+  }
+
+  & button:hover,
+  & .slick-active button {
+    background-color: $backgroundColor;
+  }
+}
+
+
 
 
 
