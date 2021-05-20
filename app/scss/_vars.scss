@@ -4,14 +4,17 @@ $title: #1a1a1a;
 $search-icon-opacity: rgba(163, 187, 200, 0.2);
 $slider-bg: #fcd7b6;
 $buttonColor: #a3bbc8;
+$iconHover: #974343;
 
 $sliderTitle: #243f4d;
 $slick-bg-opacity: rgba(255, 255, 255, 0.3);
 $sliderLine: rgba(14%, 25%, 30%, 0.1);
 $sliderSubtitle: #414141;
 $sliderInfo: #585858;
+$lamp-bg: rgba(252, 215, 182, 0.4);
 
 $filter: #8b8b8b;
+$designArticle: #f8f8f8;
 
 
 $footerTitle: #1f2044;
@@ -19,38 +22,32 @@ $footerText: #7b7b7b;
 $placeholderColor: #234969;
 $input-bg-opacity: rgba(252, 215, 182, 0.2);
 
-%dmsans-400{
-   font-family: 'DMSans-Regular',
-   sans-serif;
-   font-weight: 400;
+%dmsans-400 {
+  font-family: 'DMSans', sans-serif;
+  font-weight: 400;
 }
 
 %dmsans-500 {
-  font-family: 'DMSans-Medium',
-    sans-serif;
+  font-family: 'DMSans', sans-serif;
   font-weight: 500;
 }
 
 %dmsans-700 {
-  font-family: 'DMSans-Bold',
-    sans-serif;
+  font-family: 'DMSans', sans-serif;
   font-weight: 700;
 }
 
-%poppins-700{
-  font-family: 'Poppins-SemiBold',
-  sans-serif;
+%poppins-700 {
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
 }
 
-%rubik-400{
-    font-family: 'Rubik-Regular',
-    sans-serif;
-    font-weight: 400;
+%rubik-400 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
 }
 
 %rubik-500 {
-  font-family: 'Rubik-Medium',
-    sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 500;
 }

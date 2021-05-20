@@ -4,6 +4,7 @@ background-color: $backgroundColor;
 }
 
 button{
+  background-color: transparent;
   cursor: pointer;
   border: none;
 }
@@ -12,6 +13,12 @@ button{
   max-width: 1800px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.content__container{
+  max-width: 1200px;
+  padding: 0 15px;
+     margin: 0 auto;
 }
 
 .sr-only {
@@ -23,4 +30,11 @@ button{
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+.title{
+   @extend %dmsans-700;
+   font-size: 36px;
+   line-height: 1.2;
+   text-align: center;
 }
