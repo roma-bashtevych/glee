@@ -1,24 +1,26 @@
-body{
-@extend %dmsans-500;
-background-color: $backgroundColor;
+body {
+  @extend %dmsans-500;
+  background-color: $backgroundColor;
+  font-size: 16px;
+  line-height: 1.9;
 }
 
-button{
+button {
   background-color: transparent;
   cursor: pointer;
   border: none;
 }
 
-.container{
+.container {
   max-width: 1800px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
-.content__container{
+.container__content {
   max-width: 1200px;
   padding: 0 15px;
-     margin: 0 auto;
+  margin: 0 auto;
 }
 
 .sr-only {
@@ -32,9 +34,10 @@ button{
   border: 0;
 }
 
-.title{
-   @extend %dmsans-700;
-   font-size: 36px;
-   line-height: 1.2;
-   text-align: center;
+.title {
+  @extend %dmsans-700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+  @extend %line-1;
 }

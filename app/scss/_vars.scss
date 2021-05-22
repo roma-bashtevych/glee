@@ -5,18 +5,20 @@ $search-icon-opacity: rgba(163, 187, 200, 0.2);
 $slider-bg: #fcd7b6;
 $buttonColor: #a3bbc8;
 $iconHover: #974343;
-
 $sliderTitle: #243f4d;
 $slick-bg-opacity: rgba(255, 255, 255, 0.3);
 $sliderLine: rgba(14%, 25%, 30%, 0.1);
 $sliderSubtitle: #414141;
 $sliderInfo: #585858;
 $lamp-bg: rgba(252, 215, 182, 0.4);
-
 $filter: #8b8b8b;
 $designArticle: #f8f8f8;
-
-
+$video-play: rgba(163, 187, 200, 0.4);
+$article-bg: #e1e1e1;
+$article-line: #e0e0e0;
+$article-text: #262626;
+$article-descript: #222933;
+$sponsors-bg: rgba(252, 215, 182, 0.2);
 $footerTitle: #1f2044;
 $footerText: #7b7b7b;
 $placeholderColor: #234969;
@@ -50,4 +52,38 @@ $input-bg-opacity: rgba(252, 215, 182, 0.2);
 %rubik-500 {
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
+}
+
+%myriadpro-400 {
+  font-family: 'MyriadPro', sans-serif;
+  font-weight: 400;
+}
+
+%line-1 {
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+%line-2 {
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+%line-3 {
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
 }

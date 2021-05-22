@@ -58,3 +58,13 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'MyriadPro';
+  font-weight: 400;
+  font-style: normal;
+  src: local('MyriadPro-Regular'),
+    url('../fonts/MyriadProRegular.woff2') format('woff2'),
+    url('../fonts/MyriadProRegular.woff') format('woff');
+  font-display: swap;
+}
+

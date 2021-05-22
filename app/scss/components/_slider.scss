@@ -1,0 +1,169 @@
+.slider {
+  &__list {
+    background-color: $slider-bg;
+    position: relative;
+
+    &::before {
+      content: "";
+      background-image: url('../images/slider/gradient_slider.png');
+      background-repeat: no-repeat;
+      width: 622px;
+      height: 634px;
+      padding-right: 185px;
+      position: absolute;
+      top: 99px;
+      right: 185px;
+    }
+  }
+
+  &__item {
+    min-height: 820px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @extend %rubik-500;
+  }
+
+  &__content {
+    max-width: 411px;
+    margin-bottom: 45px;
+  }
+
+  &__title {
+    font-size: 72px;
+    line-height: 1;
+    color: $sliderTitle;
+    text-transform: uppercase;
+    @extend %line-2
+  }
+
+
+  &__content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: $menu;
+    margin-bottom: 40px;
+    max-width: 380px;
+    @extend %line-2
+  }
+
+  &__button {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 15px;
+    line-height: 1;
+    width: 200px;
+    height: 60px;
+    background-color: $buttonColor;
+    color: $backgroundColor;
+    position: relative;
+    transition: background-color 0.5s ease,
+      color 0.5s ease;
+
+    svg {
+      transition: fill 0.5s ease,
+        stroke 0.5s ease;
+    }
+
+    svg:hover,
+    &:hover {
+      color: $slider-bg;
+      stroke: $slider-bg;
+      fill: $slider-bg;
+      background-color: $placeholderColor;
+    }
+  }
+
+  &__bottom {
+    background-color: $input-bg-opacity;
+    display: flex;
+    justify-content: space-between;
+    min-height: 171px;
+  }
+
+  &__info {
+    max-width: 33.33%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__elem {
+    max-width: 293px;
+    margin: 0 auto;
+    padding-left: 80px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 0;
+      background-repeat: no-repeat;
+      width: 50px;
+    }
+
+    &--hour::before {
+      background-image: url('../images/slider/slider-icon1.svg');
+      height: 50px;
+    }
+
+    &--deliver::before {
+      background-image: url('../images/slider/slider-icon2.svg');
+      height: 30px;
+    }
+
+    &--card::before {
+      background-image: url('../images/slider/slider-icon3.svg');
+      height: 450px;
+    }
+  }
+
+  &__info:not(:last-child) {
+    border-right: 1px solid $sliderLine;
+  }
+
+  &__subtitle {
+    color: $sliderSubtitle;
+    @extend %dmsans-700;
+    font-size: 18px;
+    line-height: 2.2;
+    @extend %line-1;
+  }
+
+  &__info p {
+    color: $sliderInfo;
+    @extend %dmsans-400;
+    @extend %line-2;
+  }
+}
+
+.slick-dots {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  bottom: 45px;
+  transform: translateX(-50%);
+
+  li:not(:last-child) {
+    margin-right: 11px;
+  }
+
+  button {
+    font-size: 11px;
+    line-height: 1;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: $sliderTitle;
+    background-color: $slick-bg-opacity;
+    transition: background-color 0.5s ease;
+  }
+
+  button:hover,
+  .slick-active button {
+    background-color: $backgroundColor;
+  }
+}
