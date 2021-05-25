@@ -4,7 +4,6 @@ $title: #1a1a1a;
 $search-icon-opacity: rgba(163, 187, 200, 0.2);
 $slider-bg: #fcd7b6;
 $buttonColor: #a3bbc8;
-$iconHover: #974343;
 $sliderTitle: #243f4d;
 $slick-bg-opacity: rgba(255, 255, 255, 0.3);
 $sliderLine: rgba(14%, 25%, 30%, 0.1);
@@ -78,6 +77,12 @@ $input-bg-opacity: rgba(252, 215, 182, 0.2);
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+%bg{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover
 }
 
 @function max($numbers...) {

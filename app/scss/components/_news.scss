@@ -1,13 +1,39 @@
 .news {
   padding-top: 112px;
   position: relative;
-  margin-bottom: 17px;
+
+  &::before {
+    content: "";
+    width: 100%;
+    min-height: 170px;
+    background-color: $sponsors-bg;
+    position: absolute;
+    bottom: 268px;
+    left: 0;
+  }
 
   &__all {
     width: 86px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    color: $article-text;
+    @extend %dmsans-700;
+    border-bottom: 1px solid transparent;
+    transition: color 0.5s ease,
+    border-color 0.5s ease,
+    fill 0.5s ease;
+
+    &:hover {
+      color: $sliderInfo;
+      border-color: $sliderInfo;
+    }
+
+    &:hover .aroww-right {
+      fill: $sliderInfo;
+
+    }
   }
 
   &__top {
@@ -28,6 +54,7 @@
   &__item {
     min-height: 420px;
     max-width: 370px;
+    height: 100%;
     background-color: $backgroundColor;
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
   }
@@ -39,49 +66,57 @@
   }
 
   &__img {
+    height: 250px;
+    width: 100%;
     margin-bottom: 32px;
+    padding: 5px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
   }
 
   &__style {
     position: absolute;
     top: 250px;
-    left: 29px;
     transform: translateY(-50%);
     text-transform: uppercase;
     color: $backgroundColor;
     @extend %poppins-700;
     font-size: 14px;
     line-height: 1.4;
-    width: 103px;
-    height: 30px;
+    padding: 8px 31px;
     background-color: $buttonColor;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 15px;
+    transition: background-color 0.5s ease;
+    &:hover{
+      background-color: $sliderTitle;
+    }
   }
 
   &__descript {
-    min-height: 131px;
+    height: 131px;
     padding: 0 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    & p {
-      @extend %dmsans-500;
-      color: $article-text;
-      font-size: 18px;
-      line-height: 1.2;
-      margin-bottom: 15px;
-      @extend %line-3;
-    }
   }
 
+  &__subtitle {
+    @extend %dmsans-500;
+    color: $article-text;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    @extend %line-3;
+  }
+
+
   &__details {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 2.5;
-    padding-top: 20px;
+    padding: 10px 0;
     text-transform: uppercase;
     color: $article-descript;
     @extend %myriadpro-400;
@@ -92,12 +127,26 @@
     margin-right: 30px;
   }
 
-  &__bg {
-    position: absolute;
-    bottom: -17px;
-    width: 100%;
-    min-height: 187px;
-    background-color: $sponsors-bg;
-    z-index: 1;
+  &__data,
+  &__autor {
+    padding-left: 12px;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 6px;
+      height: 12px;
+      background-image: url('../images/news/arrow-right.svg');
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
   }
+}
+
+.aroww-right {
+  width: 7px;
+  height: 12px;
+  fill: $article-text;
 }

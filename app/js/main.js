@@ -14,13 +14,13 @@ $(".sponsors__items").slick({
   autoplaySpeed: 1500,
  });
 
-let t = document.querySelector(".design"),
-  e = document.querySelector(".products"),
-  n = {
+const mixitup1 = document.querySelector(".design"),
+  mixitup2 = document.querySelector(".products"),
+  control = {
     controls: {
       scope: "local"
     }
   };
-mixitup(t, n), mixitup(e, n)
+mixitup(mixitup1, control), mixitup(mixitup2, control)
 
 });

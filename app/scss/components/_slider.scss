@@ -25,8 +25,8 @@
   }
 
   &__content {
-    max-width: 411px;
-    margin-bottom: 45px;
+    max-width: 431px;
+     margin-bottom: 45px;
   }
 
   &__title {
@@ -34,6 +34,7 @@
     line-height: 1;
     color: $sliderTitle;
     text-transform: uppercase;
+    margin-bottom: 24px;
     @extend %line-2
   }
 
@@ -48,6 +49,7 @@
   }
 
   &__button {
+    margin-bottom: 25px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -61,18 +63,27 @@
     transition: background-color 0.5s ease,
       color 0.5s ease;
 
-    svg {
-      transition: fill 0.5s ease,
-        stroke 0.5s ease;
+    .arrows-icon {
+      width: 22px;
+      height: 9px;
+      fill: $backgroundColor;
+      transition: fill 0.5s ease;
+
+      &:hover {
+        fill: $slider-bg;
+      }
     }
 
-    svg:hover,
     &:hover {
       color: $slider-bg;
-      stroke: $slider-bg;
-      fill: $slider-bg;
       background-color: $placeholderColor;
     }
+  }
+
+  &__image{
+    max-width: 640px;
+    min-height: 264px;
+    object-fit: cover;
   }
 
   &__bottom {
@@ -95,29 +106,31 @@
     margin: 0 auto;
     padding-left: 80px;
     position: relative;
+    z-index: 1;
+    margin-bottom: 5px;
 
     &::before {
       content: "";
       position: absolute;
       top: 15px;
       left: 0;
-      background-repeat: no-repeat;
-      width: 50px;
+      @extend %bg;
+      width: 55px;
     }
 
     &--hour::before {
       background-image: url('../images/slider/slider-icon1.svg');
-      height: 50px;
+      height: 55px;
     }
 
     &--deliver::before {
       background-image: url('../images/slider/slider-icon2.svg');
-      height: 30px;
+      height: 40px;
     }
 
     &--card::before {
       background-image: url('../images/slider/slider-icon3.svg');
-      height: 450px;
+      height: 55px;
     }
   }
 
@@ -162,8 +175,11 @@
     transition: background-color 0.5s ease;
   }
 
-  button:hover,
-  .slick-active button {
+  button:hover {
     background-color: $backgroundColor;
   }
+}
+
+.slick-active button {
+  background-color: $backgroundColor;
 }
