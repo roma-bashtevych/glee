@@ -11,7 +11,6 @@
     column-gap: 30px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    width: 100%;
     margin-bottom: 180px;
   }
 
@@ -32,30 +31,22 @@
   &__inner {
     position: relative;
     padding-left: 255px;
-
-    &--second {
-      padding-left: 300px;
-    }
   }
 
   &__product {
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 405px;
     max-width: 235px;
-    object-fit: cover;
-
-
+    object-fit: contain;
   }
 
-  &__descript {
-    p {
-      @extend %rubik-400;
-      margin-bottom: 27px;
-      @extend %line-2;
-    }
+  &__text {
+    @extend %rubik-400;
+    margin-bottom: 27px;
+    @extend %line-2;
   }
+
 
   &__name {
     @extend %dmsans-700;
@@ -64,18 +55,13 @@
     margin-bottom: 21px;
     @extend %line-2;
   }
+}
 
+.button {
   &__more {
     max-width: 180px;
-    height: 60px;
     border: 1px solid $menu;
     border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    font-size: 15px;
-    line-height: 1;
     color: $menu;
     transition: background-color 0.5s ease;
 
@@ -98,7 +84,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
   border-radius: 10px;
 
   &:hover .products-card__hover {
@@ -130,34 +116,30 @@
     border-radius: 50%;
     background-color: $backgroundColor;
     transition: background-color 0.5s ease;
+     box-shadow: 0px 2px 73px 37px rgba(34, 60, 80, 0.2);
 
     &:hover {
       background-color: $buttonColor;
-    }
 
-    &:hover .products-card__icon {
-      fill: $backgroundColor;
+      .products-card__icon {
+        fill: $backgroundColor;
+      }
     }
   }
 
   &__icon {
     transition: fill 0.5s ease;
     fill: $buttonColor;
-  }
-
-  &__icon-search {
-    width: 20px;
-    height: 20px;
-  }
-
-  &__icon-basket {
     width: 22px;
     height: 20px;
-  }
 
-  &__icon-like {
-    width: 22px;
-    height: 18px;
+    &--search {
+      width: 20px;
+    }
+
+    &--like {
+      height: 18px;
+    }
   }
 
   &__link {

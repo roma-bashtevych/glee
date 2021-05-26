@@ -26,7 +26,7 @@
 
   &__content {
     max-width: 431px;
-     margin-bottom: 45px;
+    margin-bottom: 45px;
   }
 
   &__title {
@@ -48,39 +48,7 @@
     @extend %line-2
   }
 
-  &__button {
-    margin-bottom: 25px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 15px;
-    line-height: 1;
-    width: 200px;
-    height: 60px;
-    background-color: $buttonColor;
-    color: $backgroundColor;
-    position: relative;
-    transition: background-color 0.5s ease,
-      color 0.5s ease;
-
-    .arrows-icon {
-      width: 22px;
-      height: 9px;
-      fill: $backgroundColor;
-      transition: fill 0.5s ease;
-
-      &:hover {
-        fill: $slider-bg;
-      }
-    }
-
-    &:hover {
-      color: $slider-bg;
-      background-color: $placeholderColor;
-    }
-  }
-
-  &__image{
+  &__image {
     max-width: 640px;
     min-height: 264px;
     object-fit: cover;
@@ -116,11 +84,11 @@
       left: 0;
       @extend %bg;
       width: 55px;
+      height: 55px;
     }
 
     &--hour::before {
       background-image: url('../images/slider/slider-icon1.svg');
-      height: 55px;
     }
 
     &--deliver::before {
@@ -130,7 +98,6 @@
 
     &--card::before {
       background-image: url('../images/slider/slider-icon3.svg');
-      height: 55px;
     }
   }
 
@@ -151,35 +118,65 @@
     @extend %dmsans-400;
     @extend %line-2;
   }
-}
 
-.slick-dots {
-  display: flex;
-  position: absolute;
-  left: 50%;
-  bottom: 45px;
-  transform: translateX(-50%);
+  .button {
+    &__slider {
+      margin-bottom: 25px;
+      max-width: 200px;
+      background-color: $buttonColor;
+      color: $backgroundColor;
+      position: relative;
+      transition: background-color 0.5s ease,
+        color 0.5s ease;
 
-  li:not(:last-child) {
-    margin-right: 11px;
+      .arrows-icon {
+        width: 22px;
+        height: 9px;
+        fill: $backgroundColor;
+        transition: fill 0.5s ease;
+
+      }
+
+      &:hover .arrows-icon {
+        fill: $slider-bg;
+      }
+
+
+      &:hover {
+        color: $slider-bg;
+        background-color: $placeholderColor;
+      }
+    }
   }
 
-  button {
-    font-size: 11px;
-    line-height: 1;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    color: $sliderTitle;
-    background-color: $slick-bg-opacity;
-    transition: background-color 0.5s ease;
+  .slick-dots {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    bottom: 45px;
+    transform: translateX(-50%);
+
+    li:not(:last-child) {
+      margin-right: 11px;
+    }
+
+    button {
+      font-size: 11px;
+      line-height: 1;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      color: $sliderTitle;
+      background-color: $slick-bg-opacity;
+      transition: background-color 0.5s ease;
+    }
+
+    button:hover {
+      background-color: $backgroundColor;
+    }
   }
 
-  button:hover {
+  .slick-active button {
     background-color: $backgroundColor;
   }
-}
-
-.slick-active button {
-  background-color: $backgroundColor;
 }

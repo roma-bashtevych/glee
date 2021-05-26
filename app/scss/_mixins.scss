@@ -1,0 +1,5 @@
+@mixin _1400 {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}

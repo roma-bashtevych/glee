@@ -4,7 +4,6 @@
 
   &__top {
     padding-top: 79px;
-
   }
 
   &__items {
@@ -14,9 +13,12 @@
   }
 
   &__list {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 34px;
+      max-width: 300px;
+    }
   }
 
   &__title {
@@ -32,23 +34,18 @@
     @extend %line-1;
   }
 
-  &__logo {
-    margin-bottom: 20px;
+  &__label {
+    text-transform: uppercase;
   }
+
 
   &__cont,
   &__element,
   &__inform {
     font-size: 16px;
     line-height: 2;
-    width: 270px;
+    max-width: 270px;
     transition: color 0.5s ease;
-  }
-
-  &__inform {
-    line-height: 1.6;
-    margin-bottom: 34px;
-    max-width: 300px;
   }
 
   &__cont {
@@ -56,28 +53,30 @@
     max-width: 263px;
     @extend %line-2;
 
-    &--uppercase {
-      text-transform: uppercase;
-    }
   }
 
-  &__elem,
-  &__element {
+  &__elem {
     transition: color 0.5s ease;
-    &:hover {
-      color: $title;
-    }
+  }
 
+  &__elem:hover,
+  &__element:hover {
+    color: $title;
+  }
+
+  &__link {
     &--address {
       line-height: 1.7;
     }
   }
 
+
   &__element {
     border-bottom: 1px solid transparent;
     transition: border-color 0.5s ease;
+
     &:hover {
-border-color: $title;
+      border-color: $title;
     }
   }
 
@@ -88,6 +87,7 @@ border-color: $title;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 0;
 
     &::after {
       content: "";
@@ -104,10 +104,6 @@ border-color: $title;
     display: flex;
   }
 
-  &__elem {
-    transition: color 0.5s ease;
-  }
-
   &__elem:not(:last-child) {
     padding-right: 16px;
     margin-right: 16px;
@@ -115,12 +111,15 @@ border-color: $title;
   }
 
   &__copy {
-    transition: color 0.5s ease;
     max-width: 1000px;
   }
 }
 
-.contact-info {
+.logo {
+  margin-bottom: 20px;
+}
+
+.footer-info {
   font-style: normal;
 }
 
@@ -131,7 +130,7 @@ border-color: $title;
   &__input {
     border: none;
     background-color: $input-bg-opacity;
-    padding: 0 16px 0 16px;
+    padding: 0 16px;
     color: $placeholderColor;
     font-size: 12px;
     line-height: 1.2;
