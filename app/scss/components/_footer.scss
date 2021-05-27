@@ -12,7 +12,15 @@
     margin-bottom: 64px;
   }
 
+  &__item{
+    max-width: 270px;
+  }
+
   &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     p {
       font-size: 16px;
       line-height: 1.6;
@@ -24,7 +32,7 @@
   &__title {
     display: flex;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: 11px;
     padding-top: 15px;
     @extend %dmsans-700;
     font-size: 16px;
@@ -38,13 +46,12 @@
     text-transform: uppercase;
   }
 
-
   &__cont,
   &__element,
   &__inform {
     font-size: 16px;
     line-height: 2;
-    max-width: 270px;
+    width: 270px;
     transition: color 0.5s ease;
   }
 
@@ -52,24 +59,23 @@
     line-height: 1.7;
     max-width: 263px;
     @extend %line-2;
-
   }
 
   &__elem {
     transition: color 0.5s ease;
   }
 
+
   &__elem:hover,
   &__element:hover {
     color: $title;
   }
 
-  &__link {
+  &__element {
     &--address {
       line-height: 1.7;
     }
   }
-
 
   &__element {
     border-bottom: 1px solid transparent;
@@ -87,7 +93,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
 
     &::after {
       content: "";
@@ -113,10 +118,10 @@
   &__copy {
     max-width: 1000px;
   }
-}
 
-.logo {
-  margin-bottom: 20px;
+  &__logo {
+    margin-bottom: 20px;
+  }
 }
 
 .footer-info {
@@ -130,7 +135,7 @@
   &__input {
     border: none;
     background-color: $input-bg-opacity;
-    padding: 0 16px;
+    padding: 0 16px 0 16px;
     color: $placeholderColor;
     font-size: 12px;
     line-height: 1.2;
@@ -148,7 +153,7 @@
   }
 
   &__btn {
-    width: 100px;
+    width: 163px;
     height: 38px;
     border: none;
     background-color: $buttonColor;

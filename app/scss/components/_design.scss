@@ -10,7 +10,7 @@
     grid-template-columns: repeat(3, 1fr);
     row-gap: 34px;
     width: 100%;
-    margin-bottom: 77px;
+    margin-bottom: 123px;
   }
 
   &__item {
@@ -20,8 +20,11 @@
     @extend %dmsans-700;
     line-height: 1.2;
     position: relative;
-    margin: 0 15px 34px;
     padding: 35px 0 0 35px;
+  }
+
+  &__filter{
+    margin-bottom: 69px;
   }
 }
 
@@ -34,7 +37,7 @@
     @extend %line-2;
     position: relative;
     z-index: 2;
-  }
+   }
 
   &__style {
     color: $buttonColor;

@@ -66,6 +66,14 @@
     box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
   }
 
+  &__arrow {
+    width: 7px;
+    height: 12px;
+    fill: $article-text;
+  }
+}
+
+.news-card {
   &__link {
     height: 250px;
     width: 100%;
@@ -86,12 +94,17 @@
   }
 
   &__descript {
-    height: 131px;
+    height: 165px;
     padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   &__style {
     max-width: 310px;
+    position: absolute;
+    bottom: 137px;
     transform: translateY(-50%);
     text-transform: uppercase;
     color: $backgroundColor;
@@ -111,11 +124,11 @@
   }
 
   &__subtitle {
+    padding-top: 32px;
     @extend %dmsans-500;
     color: $article-text;
     font-size: 18px;
     line-height: 1.2;
-    margin-bottom: 15px;
     @extend %line-3;
   }
 
@@ -148,11 +161,5 @@
       left: 0;
       top: 0;
     }
-  }
-
-  &__arrow {
-    width: 7px;
-    height: 12px;
-    fill: $article-text;
   }
 }
