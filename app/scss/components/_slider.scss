@@ -1,4 +1,18 @@
 .slider {
+  padding-top: 145px;
+
+  @include _1200 {
+    padding-top: 85px;
+  }
+
+  @include _992 {
+    padding-top: 65px;
+  }
+
+  @include _768 {
+    padding-top: 50px;
+  }
+
   &__list {
     background-color: $slider-bg;
     position: relative;
@@ -13,6 +27,10 @@
       position: absolute;
       top: 99px;
       right: 185px;
+
+      @include _1200 {
+        display: none;
+      }
     }
   }
 
@@ -22,11 +40,30 @@
     justify-content: space-between;
     align-items: center;
     @extend %rubik-500;
+
+    @include _1200 {
+      min-height: 520px;
+    }
+
+    @include _992 {
+      min-height: 420px;
+    }
+
+    @include _768 {
+      justify-content: center;
+      flex-direction: column;
+      min-height: 320px;
+    }
   }
 
   &__content {
     max-width: 431px;
     margin-bottom: 45px;
+
+    @include _768 {
+      max-width: 100%;
+      margin-bottom: 0;
+    }
   }
 
   &__title {
@@ -35,7 +72,15 @@
     color: $sliderTitle;
     text-transform: uppercase;
     margin-bottom: 24px;
-    @extend %line-2
+    @include line-2;
+
+    @include _992 {
+      font-size: 40px;
+    }
+
+    @include _768 {
+      font-size: 20px;
+    }
   }
 
 
@@ -45,13 +90,26 @@
     color: $menu;
     margin-bottom: 40px;
     max-width: 380px;
-    @extend %line-2
+    @include line-2;
+
+    @include _992 {
+      font-size: 15px;
+    }
+
+    @include _768 {
+      max-width: 100%;
+    }
   }
 
   &__image {
     max-width: 640px;
     min-height: 264px;
     object-fit: cover;
+
+    @include _576 {
+      max-width: 80%;
+      min-height: 190px;
+    }
   }
 
   &__bottom {
@@ -59,6 +117,10 @@
     display: flex;
     justify-content: space-between;
     min-height: 171px;
+
+    @include _768 {
+      display: block;
+    }
   }
 
   &__info {
@@ -67,6 +129,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include _768 {
+      max-width: 100%;
+      display: block;
+    }
   }
 
   &__elem {
@@ -76,6 +143,11 @@
     position: relative;
     z-index: 1;
     margin-bottom: 5px;
+
+    @include _768 {
+      max-width: 100%;
+      padding: 10px 0 10px 80px;
+    }
 
     &::before {
       content: "";
@@ -103,6 +175,10 @@
 
   &__info:not(:last-child) {
     border-right: 1px solid $sliderLine;
+
+    @include _768 {
+      border: none;
+    }
   }
 
   &__subtitle {
@@ -110,13 +186,13 @@
     @extend %dmsans-700;
     font-size: 18px;
     line-height: 2.2;
-    @extend %line-1;
+    @include line-1;
   }
 
   &__info p {
     color: $sliderInfo;
     @extend %dmsans-400;
-    @extend %line-2;
+    @include line-2;
   }
 
   .button {
@@ -128,6 +204,12 @@
       position: relative;
       transition: background-color 0.5s ease,
         color 0.5s ease;
+
+      @include _768 {
+        max-width: 150px;
+        margin: 0 auto 20px;
+        ;
+      }
 
       .arrows-icon {
         width: 22px;

@@ -9,8 +9,19 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 34px;
+    column-gap: 30px;
     width: 100%;
     margin-bottom: 123px;
+
+    @include _992 {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 90px;
+    }
+
+    @include _768 {
+      grid-template-columns: repeat(1, 1fr);
+      margin-bottom: 60px;
+    }
   }
 
   &__item {
@@ -23,7 +34,7 @@
     padding: 35px 0 0 35px;
   }
 
-  &__filter{
+  &__filter {
     margin-bottom: 69px;
   }
 }
@@ -34,14 +45,16 @@
     margin-bottom: 15px;
     font-size: 20px;
     color: $title;
-    @extend %line-2;
+    @include line-2;
     position: relative;
     z-index: 2;
-   }
+  }
 
   &__style {
+    position: relative;
+    z-index: 2;
     color: $buttonColor;
-    @extend %line-1;
+    @include line-1;
   }
 
   &__img {
@@ -50,6 +63,10 @@
     bottom: 35px;
     max-width: 270px;
     z-index: 1;
+
+    @include _576 {
+      max-width: 220px;
+    }
 
 
     img {
@@ -68,6 +85,22 @@
   align-items: center;
   position: relative;
 
+  @include _1200 {
+    min-height: 350px;
+  }
+
+  @include _992 {
+    min-height: 300px;
+  }
+
+  @include _768 {
+    min-height: 250px;
+  }
+
+  @include _576 {
+    min-height: 200px;
+  }
+
   &:hover .video__icon {
     fill: $sliderTitle;
   }
@@ -83,6 +116,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+
+    @include _992 {
+      width: 68px;
+      height: 68px;
+    }
+
+    @include _576 {
+      width: 48px;
+      height: 48px;
+    }
   }
 
   &::after {
@@ -97,6 +140,16 @@
     border-radius: 50%;
     transition: opacity 0.5s ease;
     z-index: 1;
+
+    @include _992 {
+      width: 95px;
+      height: 95px;
+    }
+
+    @include _576 {
+      width: 70px;
+      height: 70px;
+    }
   }
 
   &__icon {
@@ -107,6 +160,11 @@
     position: relative;
     top: 5px;
     left: 3px;
-    z-index: 3;
+    z-index: 2;
+
+    @include _576 {
+      width: 15px;
+      height: 18px;
+    }
   }
 }

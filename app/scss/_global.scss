@@ -49,6 +49,9 @@ a {
   line-height: 1.2;
   text-align: center;
   max-width: 1770px;
+  @include _768{
+    font-size: 20px;
+  }
 }
 
 .button {
@@ -59,4 +62,8 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }

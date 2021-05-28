@@ -12,25 +12,86 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-bottom: 180px;
+
+    @include _1200 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include _768 {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-bottom: 80px;
+    }
+
+    @include _576 {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 50px;
+    }
   }
 
   &__info {
     display: flex;
+
+    @include _1400 {
+      // flex-wrap: wrap;
+      display: block;
+    }
   }
 
   &__elem {
-    padding: 93px 100px 99px 130px;
+    min-height: 392px;
+    max-width: 870px;
+    padding: 102px 99px 0 79px;
     width: 100%;
     background-color: $lamp-bg;
 
+    @include _1400 {
+      max-width: 100%;
+    }
+
+    @include _768 {
+      padding: 20px;
+      min-height: 340px;
+    }
+
+    @include _576 {
+      min-height: 233px;
+    }
+
     &:not(:last-child) {
       margin-right: 30px;
+
+      @include _1400 {
+        margin: 0 0 130px;
+      }
+
+      @include _768 {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  &__descript {
+    @include _768 {
+      padding-left: 20px;
     }
   }
 
   &__inner {
     position: relative;
     padding-left: 255px;
+
+    @include _768 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 0;
+    }
+
+    @include _576 {
+      justify-content: space-evenly;
+    }
   }
 
   &__product {
@@ -39,12 +100,26 @@
     bottom: 0;
     max-width: 235px;
     object-fit: contain;
+
+    @include _768 {
+      position: static;
+      max-width: 150px;
+    }
+
+    @include _576 {
+      max-width: 90px;
+    }
   }
 
   &__text {
     @extend %rubik-400;
     margin-bottom: 27px;
-    @extend %line-2;
+    @include line-2;
+
+    @include _576 {
+      @include line-1;
+      max-width: 150px;
+    }
   }
 
 
@@ -53,7 +128,15 @@
     font-size: 26px;
     line-height: 1.2;
     margin-bottom: 21px;
-    @extend %line-2;
+    @include line-2;
+
+    @include _768 {
+      font-size: 20px;
+    }
+
+    @include _576 {
+      max-width: 80px;
+    }
   }
 }
 
@@ -64,6 +147,18 @@
     border-radius: 5px;
     color: $menu;
     transition: background-color 0.5s ease;
+
+    @include _576 {
+      max-width: 117px;
+      height: 36px;
+    }
+
+    svg {
+      @include _576 {
+        display: none;
+      }
+    }
+
 
     &:hover {
       background-color: $slider-bg;
@@ -86,6 +181,10 @@
   position: relative;
   box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
   border-radius: 10px;
+
+  @include _992 {
+    height: 300px;
+  }
 
   &:hover .products-card__hover {
     opacity: 1;
@@ -116,7 +215,7 @@
     border-radius: 50%;
     background-color: $backgroundColor;
     transition: background-color 0.5s ease;
-     box-shadow: 0px 2px 73px 37px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 2px 73px 37px rgba(34, 60, 80, 0.2);
 
     &:hover {
       background-color: $buttonColor;
@@ -154,7 +253,7 @@
     margin-top: auto;
     font-size: 16px;
     line-height: 2;
-    @extend %line-1;
+    @include line-1;
     max-width: 170px;
   }
 
@@ -163,7 +262,7 @@
     line-height: 2.5;
     padding-bottom: 26px;
     color: $buttonColor;
-    @extend %line-1;
+    @include line-1;
   }
 }
 

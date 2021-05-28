@@ -7,6 +7,14 @@
     display: flex;
     align-items: center;
     min-height: 268px;
+
+    @include _768 {
+      min-height: 199px;
+    }
+
+    @include _576 {
+      min-height: 148px;
+    }
   }
 
   &__link {
