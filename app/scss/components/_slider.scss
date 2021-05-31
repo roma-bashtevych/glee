@@ -1,5 +1,4 @@
 .slider {
-  
   &__list {
     background-color: $slider-bg;
     position: relative;
@@ -65,6 +64,8 @@
     }
 
     @include _768 {
+      text-align: center;
+      padding-top: 20px;
       font-size: 20px;
     }
   }
@@ -119,6 +120,7 @@
     @include _768 {
       max-width: 100%;
       display: block;
+      padding: 10px;
     }
   }
 
@@ -132,7 +134,7 @@
 
     @include _768 {
       max-width: 100%;
-      padding: 10px 0 10px 80px;
+      // padding: 10px 0 10px 80px;
     }
 
     &::before {
@@ -163,7 +165,8 @@
     border-right: 1px solid $sliderLine;
 
     @include _768 {
-      border: none;
+      border-right: none;
+      border-bottom: 1px solid $sliderLine;
     }
   }
 
@@ -181,45 +184,16 @@
     @include line-2;
   }
 
-  .button {
-    &--slider {
-      margin-bottom: 25px;
-      max-width: 200px;
-      background-color: $buttonColor;
-      color: $backgroundColor;
-      position: relative;
-      transition: background-color 0.5s ease,
-        color 0.5s ease;
-
-      svg {
-        width: 22px;
-        height: 9px;
-        fill: $backgroundColor;
-        transition: fill 0.5s ease;
-      }
-
-      &:hover svg {
-        fill: $slider-bg;
-      }
-
-      @include _768 {
-        max-width: 150px;
-        margin: 0 auto 20px;
-      }
-
-      &:hover {
-        color: $slider-bg;
-        background-color: $placeholderColor;
-      }
-    }
-  }
-
   .slick-dots {
     display: flex;
     position: absolute;
     left: 50%;
     bottom: 45px;
     transform: translateX(-50%);
+
+    @include _768 {
+      bottom: 25px;
+    }
 
     li:not(:last-child) {
       margin-right: 11px;
@@ -234,14 +208,47 @@
       color: $sliderTitle;
       background-color: $slick-bg-opacity;
       transition: background-color 0.5s ease;
-    }
 
-    button:hover {
-      background-color: $backgroundColor;
+      &:hover {
+        background-color: $backgroundColor;
+      }
     }
   }
 
   .slick-active button {
     background-color: $backgroundColor;
+  }
+}
+
+.button {
+  &--slider {
+    margin-bottom: 25px;
+    max-width: 200px;
+    background-color: $buttonColor;
+    color: $backgroundColor;
+    position: relative;
+    transition: background-color 0.5s ease,
+      color 0.5s ease;
+
+    svg {
+      width: 22px;
+      height: 9px;
+      fill: $backgroundColor;
+      transition: fill 0.5s ease;
+    }
+
+    &:hover svg {
+      fill: $slider-bg;
+    }
+
+    @include _768 {
+      max-width: 150px;
+      margin: 0 auto 20px;
+    }
+
+    &:hover {
+      color: $slider-bg;
+      background-color: $placeholderColor;
+    }
   }
 }

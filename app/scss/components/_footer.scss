@@ -43,7 +43,9 @@
     }
 
     @include _576 {
-      margin: 0 auto;
+      padding-top: 0;
+      max-width: 100%;
+      margin: 0 auto 20px;
     }
   }
 
@@ -162,10 +164,10 @@
   &__logo {
     margin-bottom: 20px;
   }
-}
 
-.footer-info {
-  font-style: normal;
+  &__info {
+    font-style: normal;
+  }
 }
 
 .form {
@@ -182,6 +184,10 @@
     max-width: 193px;
     width: 100%;
     @extend %dmsans-400;
+
+    @include _576 {
+      max-width: 100%;
+    }
 
     &:focus {
       outline-color: $placeholderColor;
@@ -202,6 +208,10 @@
     font-size: 14px;
     line-height: 1.5;
     transition: background-color 0.5s ease;
+
+    @include _576 {
+      width: 100px;
+    }
 
     &:hover {
       background-color: $placeholderColor;

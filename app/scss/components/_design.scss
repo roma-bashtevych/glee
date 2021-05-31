@@ -1,9 +1,9 @@
 .design {
-  padding-top: 94px;
+  padding-top: 73px;
 
   &__title {
-    margin-bottom: 22px;
-  }
+    margin-bottom: 18px;
+    }
 
   &__content {
     display: grid;
@@ -20,7 +20,10 @@
 
     @include _768 {
       grid-template-columns: 1fr;
-      margin-bottom: 60px;
+      margin: 0 auto 60px;
+      padding: 10px;
+      max-width: 450px;
+
     }
   }
 
@@ -36,6 +39,10 @@
 
   &__filter {
     margin-bottom: 69px;
+
+    @include _576{
+      margin-bottom: 50px;
+    }
   }
 }
 
@@ -92,28 +99,14 @@
     min-height: 300px;
   }
 
-  @include _768 {
-    min-height: 250px;
-  }
-
-  @include _576 {
-    min-height: 200px;
-  }
-
   &:hover .video__icon {
     fill: $sliderTitle;
   }
 
   &::before {
-    content: "";
     background-color: $buttonColor;
     width: 98px;
     height: 98px;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 2;
 
     @include _992 {
@@ -127,16 +120,20 @@
     }
   }
 
+  &::before,
   &::after {
     content: "";
-    width: 127px;
-    height: 127px;
-    background-color: $video-play;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
+  }
+
+  &::after {
+    width: 127px;
+    height: 127px;
+    background-color: $video-play;
     transition: opacity 0.5s ease;
     z-index: 1;
 

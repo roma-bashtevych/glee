@@ -1,275 +1,276 @@
-.products {
-  padding-top: 64px;
-  position: relative;
+ .products {
+   padding-top: 64px;
+   position: relative;
 
-  &__title {
-    margin-bottom: 20px;
-  }
+   &__title {
+     color: $productsTitle;
+     margin-bottom: 20px;
+   }
 
-  &__content {
-    row-gap: 40px;
-    column-gap: 30px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-bottom: 180px;
+   &__content {
+     row-gap: 40px;
+     column-gap: 30px;
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     margin-bottom: 180px;
 
-    @include _1200 {
-      grid-template-columns: repeat(3, 1fr);
-    }
+     @include _1200 {
+       grid-template-columns: repeat(3, 1fr);
+     }
 
-    @include _768 {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      margin-bottom: 80px;
-    }
+     @include _768 {
+       grid-template-columns: repeat(2, 1fr);
+       gap: 15px;
+       margin-bottom: 80px;
+     }
 
-    @include _576 {
-      grid-template-columns: 1fr;
-      gap: 10px;
-      margin-bottom: 50px;
-    }
-  }
+     @include _576 {
+       grid-template-columns: 1fr;
+       gap: 10px;
+       margin-bottom: 50px;
+     }
+   }
 
-  &__info {
-    display: flex;
+   &__info {
+     display: flex;
 
-    @include _1400 {
-      display: block;
-    }
-  }
+     @include _1200 {
+       flex-wrap: wrap;
+     }
+   }
 
-  &__elem {
-    min-height: 392px;
-    max-width: 870px;
-    padding: 92px 99px 10px 79px;
-    width: 100%;
-    background-color: $lamp-bg;
+   &__elem {
+     min-height: 392px;
+     max-width: 870px;
+     width: 100%;
+     background-color: $lamp-bg;
 
-    @include _1400 {
-      max-width: 100%;
-    }
+     @include _1200 {
+       max-width: 100%;
+     }
 
-    @include _768 {
-      padding: 20px;
-      min-height: 340px;
-    }
+     @include _768 {
+       padding: 20px;
+       min-height: 340px;
+     }
 
-    @include _576 {
-      min-height: 233px;
-    }
+     @include _576 {
+       min-height: 233px;
+     }
 
-    &:not(:last-child) {
-      margin-right: 30px;
+     &:not(:last-child) {
+       margin-right: 30px;
 
-      @include _1400 {
-        margin: 0 0 130px;
-      }
+       @include _1200 {
+         margin: 0 0 130px;
+       }
 
-      @include _768 {
-        margin: 0 0 50px;
-      }
-    }
-  }
+       @include _768 {
+         margin: 0 0 80px;
+       }
+     }
+   }
 
-  &__descript {
-    @include _768 {
-      padding-left: 20px;
-    }
-  }
+   &__descript {
+     max-width: 345px;
+     padding: 0 10px;
 
-  &__inner {
-    position: relative;
-    padding-left: 255px;
+     @include _768 {
+       padding-left: 20px;
+     }
+   }
 
-    @include _768 {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-left: 0;
-    }
+   &__inner {
+     padding: 5px 20px;
+     align-items: center;
+     justify-content: center;
+     display: flex;
 
-    @include _576 {
-      justify-content: space-evenly;
-    }
-  }
+     @include _1200 {
+       justify-content: space-evenly;
+     }
+   }
 
-  &__product {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    max-width: 235px;
-    object-fit: contain;
+   &__product {
+     transform: translateY(-99px);
+     max-width: 235px;
+     object-fit: contain;
 
-    @include _768 {
-      position: static;
-      max-width: 150px;
-    }
+     @include _768 {
+       transform: translateY(-40px);
+       max-width: 150px;
+     }
 
-    @include _576 {
-      max-width: 90px;
-    }
-  }
+     @include _576 {
+       max-width: 120px;
+     }
+   }
 
-  &__text {
-    @extend %rubik-400;
-    margin-bottom: 27px;
-    @include line-2;
+   &__text {
+     @extend %rubik-400;
+     margin-bottom: 33px;
+     @include line-2;
 
-    @include _576 {
-      @include line-1;
-      max-width: 150px;
-    }
-  }
+     @include _576 {
+       margin-bottom: 10px;
+       @include line-1;
+       max-width: 150px;
+     }
+   }
 
-  &__name {
-    @extend %dmsans-700;
-    font-size: 26px;
-    line-height: 1.2;
-    margin-bottom: 21px;
-    @include line-2;
+   &__name {
+     @extend %dmsans-700;
+     font-size: 26px;
+     line-height: 1.2;
+     margin-bottom: 16px;
+     @include line-2;
 
-    @include _768 {
-      font-size: 20px;
-    }
+     @include _768 {
+       margin-bottom: 10px;
+       font-size: 20px;
+     }
 
-    @include _576 {
-      max-width: 80px;
-    }
-  }
-}
+     @include _576 {
+       max-width: 80px;
+     }
+   }
+ }
 
-.button {
-  &--more {
-    max-width: 180px;
-    border: 1px solid $menu;
-    border-radius: 5px;
-    color: $menu;
-    transition: background-color 0.5s ease;
+ .button {
+   &--more {
+     max-width: 180px;
+     border: 1px solid $menu;
+     border-radius: 5px;
+     color: $menu;
+     transition: background-color 0.5s ease;
+     margin-bottom: 18px;
 
-    @include _576 {
-      max-width: 117px;
-      height: 36px;
-    }
+     @include _576 {
+       margin-bottom: 10px;
+       max-width: 117px;
+       height: 36px;
+     }
 
-    svg {
-      width: 22px;
-      height: 9px;
-      fill: $menu;
+     svg {
+       width: 22px;
+       height: 9px;
+       fill: $menu;
 
-      @include _576 {
-        display: none;
-      }
-    }
+       @include _576 {
+         display: none;
+       }
+     }
 
-    &:hover {
-      background-color: $slider-bg;
-    }
-  }
-}
+     &:hover {
+       background-color: $slider-bg;
+     }
+   }
+ }
 
-.products-card {
-  width: 100%;
-  height: 380px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
-  border-radius: 10px;
-  padding: 0 10px 26px;
+ .products-card {
+   width: 100%;
+   height: 380px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   position: relative;
+   box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+   border-radius: 10px;
+   padding: 0 10px 26px;
 
-  @include _992 {
-    height: 300px;
-  }
+   @include _992 {
+     padding: 10px 10px 26px;
+     height: 300px;
+   }
 
-  &:hover .products-card__hover {
-    opacity: 1;
-  }
+   &:hover .products-card__hover {
+     opacity: 1;
+   }
 
-  &__hover {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 170px;
-    display: flex;
-    justify-content: space-between;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
+   &__hover {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 170px;
+     display: flex;
+     justify-content: space-between;
+     opacity: 0;
+     transition: opacity 0.5s ease;
+   }
 
-  &__icons {
-    width: 45px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: $backgroundColor;
-    transition: background-color 0.5s ease;
-    box-shadow: 0px 2px 73px 37px rgba(34, 60, 80, 0.2);
+   &__icons {
+     width: 45px;
+     height: 45px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 50%;
+     background-color: $backgroundColor;
+     transition: background-color 0.5s ease;
+     box-shadow: 0px 2px 73px 37px rgba(34, 60, 80, 0.2);
 
-    &:hover {
-      background-color: $buttonColor;
+     &:hover {
+       background-color: $buttonColor;
 
-      svg {
-        fill: $backgroundColor;
-      }
-    }
-  }
+       svg {
+         fill: $backgroundColor;
+       }
+     }
+   }
 
-  svg {
-    transition: fill 0.5s ease;
-    fill: $buttonColor;
-    width: 22px;
-    height: 20px;
-  }
+   svg {
+     transition: fill 0.5s ease;
+     fill: $buttonColor;
+     width: 22px;
+     height: 20px;
+   }
 
-  &__link {
-    display: flex;
-    min-height: 200px;
-    align-items: center;
-    margin: auto 0;
-  }
+   &__link {
+     display: flex;
+     min-height: 200px;
+     align-items: center;
+     margin: auto 0;
+   }
 
-  &__subtitle {
-    color: $sliderSubtitle;
-    margin-top: auto;
-    font-size: 16px;
-    line-height: 2;
-    @include line-1;
-    max-width: 170px;
-  }
+   &__subtitle {
+     color: $sliderSubtitle;
+     margin-top: auto;
+     font-size: 16px;
+     line-height: 2;
+     @include line-1;
+     max-width: 170px;
+   }
 
-  &__price {
-    @extend %dmsans-700;
-    line-height: 2.5;
-    color: $buttonColor;
-    @include line-1;
-  }
-}
+   &__price {
+     @extend %dmsans-700;
+     line-height: 2.5;
+     color: $buttonColor;
+     @include line-1;
+   }
+ }
 
-.filter {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 80px;
+ .filter {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   margin-bottom: 80px;
 
-  &__item:not(:last-child) {
-    margin-right: 20px;
-  }
+   &__item:not(:last-child) {
+     margin-right: 20px;
+   }
 
-  &__btn {
-    @extend %dmsans-700;
-    font-size: 16px;
-    line-height: 1.2;
-    color: $filter;
-    background-color: transparent;
-    transition: color 0.5s ease;
-  }
-}
+   &__btn {
+     @extend %dmsans-700;
+     font-size: 16px;
+     line-height: 1.2;
+     color: $filter;
+     background-color: transparent;
+     transition: color 0.5s ease;
+   }
+ }
 
-.filter__btn:hover,
-.mixitup-control-active {
-  color: $title;
-}
+ .filter__btn:hover,
+ .mixitup-control-active {
+   color: $title;
+ }
