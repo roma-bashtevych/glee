@@ -19,7 +19,7 @@
     }
 
     @include _768 {
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: 1fr;
       margin-bottom: 60px;
     }
   }
@@ -31,7 +31,7 @@
     @extend %dmsans-700;
     line-height: 1.2;
     position: relative;
-    padding: 35px 0 0 35px;
+    padding: 38px 10px 0 35px;
   }
 
   &__filter {
@@ -67,7 +67,6 @@
     @include _576 {
       max-width: 220px;
     }
-
 
     img {
       object-fit: contain;
@@ -158,7 +157,7 @@
     fill: $backgroundColor;
     transition: fill 0.5s ease;
     position: relative;
-    top: 5px;
+    top: 0;
     left: 3px;
     z-index: 2;
 

@@ -49,19 +49,19 @@ a {
   line-height: 1.2;
   text-align: center;
   max-width: 1770px;
-  @include _768{
+
+  @include _768 {
     font-size: 20px;
   }
 }
 
 .button {
-  height: 60px;
   font-size: 15px;
   line-height: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 25px 20px;
 }
 
 .overflow-hidden {

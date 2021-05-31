@@ -1,18 +1,5 @@
 .slider {
-  padding-top: 145px;
-
-  @include _1200 {
-    padding-top: 85px;
-  }
-
-  @include _992 {
-    padding-top: 65px;
-  }
-
-  @include _768 {
-    padding-top: 50px;
-  }
-
+  
   &__list {
     background-color: $slider-bg;
     position: relative;
@@ -23,7 +10,6 @@
       background-repeat: no-repeat;
       width: 622px;
       height: 634px;
-      padding-right: 185px;
       position: absolute;
       top: 99px;
       right: 185px;
@@ -196,7 +182,7 @@
   }
 
   .button {
-    &__slider {
+    &--slider {
       margin-bottom: 25px;
       max-width: 200px;
       background-color: $buttonColor;
@@ -205,24 +191,21 @@
       transition: background-color 0.5s ease,
         color 0.5s ease;
 
-      @include _768 {
-        max-width: 150px;
-        margin: 0 auto 20px;
-        ;
-      }
-
-      .arrows-icon {
+      svg {
         width: 22px;
         height: 9px;
         fill: $backgroundColor;
         transition: fill 0.5s ease;
-
       }
 
-      &:hover .arrows-icon {
+      &:hover svg {
         fill: $slider-bg;
       }
 
+      @include _768 {
+        max-width: 150px;
+        margin: 0 auto 20px;
+      }
 
       &:hover {
         color: $slider-bg;

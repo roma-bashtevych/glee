@@ -34,7 +34,6 @@
     display: flex;
 
     @include _1400 {
-      // flex-wrap: wrap;
       display: block;
     }
   }
@@ -42,7 +41,7 @@
   &__elem {
     min-height: 392px;
     max-width: 870px;
-    padding: 102px 99px 0 79px;
+    padding: 92px 99px 10px 79px;
     width: 100%;
     background-color: $lamp-bg;
 
@@ -67,7 +66,7 @@
       }
 
       @include _768 {
-        margin-bottom: 50px;
+        margin: 0 0 50px;
       }
     }
   }
@@ -122,7 +121,6 @@
     }
   }
 
-
   &__name {
     @extend %dmsans-700;
     font-size: 26px;
@@ -141,7 +139,7 @@
 }
 
 .button {
-  &__more {
+  &--more {
     max-width: 180px;
     border: 1px solid $menu;
     border-radius: 5px;
@@ -154,22 +152,19 @@
     }
 
     svg {
+      width: 22px;
+      height: 9px;
+      fill: $menu;
+
       @include _576 {
         display: none;
       }
     }
 
-
     &:hover {
       background-color: $slider-bg;
     }
   }
-}
-
-.arrow-icon {
-  width: 22px;
-  height: 9px;
-  fill: $menu;
 }
 
 .products-card {
@@ -181,6 +176,7 @@
   position: relative;
   box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
   border-radius: 10px;
+  padding: 0 10px 26px;
 
   @include _992 {
     height: 300px;
@@ -188,10 +184,6 @@
 
   &:hover .products-card__hover {
     opacity: 1;
-  }
-
-  &__img {
-    padding: 0 10px;
   }
 
   &__hover {
@@ -220,25 +212,17 @@
     &:hover {
       background-color: $buttonColor;
 
-      .products-card__icon {
+      svg {
         fill: $backgroundColor;
       }
     }
   }
 
-  &__icon {
+  svg {
     transition: fill 0.5s ease;
     fill: $buttonColor;
     width: 22px;
     height: 20px;
-
-    &--search {
-      width: 20px;
-    }
-
-    &--like {
-      height: 18px;
-    }
   }
 
   &__link {
@@ -260,7 +244,6 @@
   &__price {
     @extend %dmsans-700;
     line-height: 2.5;
-    padding-bottom: 26px;
     color: $buttonColor;
     @include line-1;
   }
