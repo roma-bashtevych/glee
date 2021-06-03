@@ -202,29 +202,40 @@
        font-size: 16px;
        line-height: 1.9;
        color: $sliderTitle;
-       margin-bottom: 40px;
+       margin-bottom: 13px;
        display: none;
      }
    }
 
-   &.products-card--list.product-card--del{
+   &.products-card--list.product-card--del {
      display: none;
    }
+
    &.products-card--list {
      width: 100%;
      height: 100%;
      flex-direction: row;
-     column-gap: 30px;
+     column-gap: 62px;
      box-shadow: none;
      padding: 0;
 
+     @include _992 {
+       flex-direction: column;
+     }
+
      &:not(:last-child) {
-       margin-bottom: 40px;
+       @include _1200 {
+         margin-bottom: 10px;
+       }
      }
 
      .products-card__star {
        margin-bottom: 37px;
        display: block;
+
+       @include _992 {
+         margin-bottom: 10px;
+       }
      }
 
      .products-card__price {
@@ -233,6 +244,12 @@
 
      .products-card__price-list {
        display: block;
+       margin-bottom: 19px;
+
+       @include _992 {
+         margin-bottom: 10px;
+         font-size: 18px;
+       }
      }
 
      .products-card__inner {
@@ -241,8 +258,16 @@
        max-width: 405px;
        align-items: flex-start;
 
+       @include _1200 {
+         max-width: 300px;
+       }
+
        p {
          display: block;
+        
+         @include _992 {
+           margin-bottom: 10px;
+         }
        }
      }
 
@@ -254,10 +279,28 @@
        align-items: center;
        justify-content: center;
 
+       @include _1200 {
+         height: 375px;
+         width: 295px;
+       }
+
+       @include _992 {
+         margin-bottom: 20px;
+         height: 300px;
+       }
+
        .products-card__img {
          min-height: 347px;
          max-width: 323px;
          object-fit: contain;
+
+         @include _1200 {
+           min-height: 200px;
+         }
+
+         @include _576 {
+           max-width: 245px;
+         }
        }
      }
 
@@ -285,8 +328,13 @@
        font-size: 40px;
        line-height: 1;
        max-width: 270px;
-       margin-bottom: 25px;
+       margin-bottom: 16px;
        color: $favoritesTitle;
+
+       @include _992 {
+         margin-bottom: 15px;
+         font-size: 25px;
+       }
      }
 
      .products-card__icons {

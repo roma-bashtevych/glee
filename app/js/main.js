@@ -15,26 +15,17 @@ $(function () {
 
   $('.products-card__star').rateYo({
     starWidth: "17px",
-    spacing: "17px",
+    spacing: "12px",
     normalFill: "#d6d6d6",
     ratedFill: "#ffcc00"
   });
 
   $('.star').rateYo({
-    starWidth: "10px",
+    starWidth: "13px",
+    spacing: "5px",
     normalFill: "#d6d6d6",
     ratedFill: "#ffcc00"
   });
-
-
-
-
-  // $(".products-card__star").rateYo({
-  //   rating: 4,
-  //  starWidth: "17px",
-  //   normalFill: "#d6d6d6",
-  //   spacing: "17px"
-  // });
 
   $('.filter-price__input').ionRangeSlider({
     type: "double",

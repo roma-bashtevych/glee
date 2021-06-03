@@ -151,6 +151,11 @@
     padding-right: 16px;
     margin-right: 16px;
     border-right: 1px solid $footerText;
+
+    @include _576 {
+      padding-right: 10px;
+      margin-right: 10px;
+    }
   }
 
   &__copy {
