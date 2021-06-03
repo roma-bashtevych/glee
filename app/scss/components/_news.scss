@@ -53,7 +53,7 @@
       color: $sliderInfo;
       border-color: $sliderInfo;
 
-      .aroww-right {
+      svg {
         fill: $sliderInfo;
       }
     }
@@ -100,7 +100,7 @@
     }
   }
 
-  &__arrow {
+  svg {
     width: 7px;
     height: 12px;
     fill: $article-text;

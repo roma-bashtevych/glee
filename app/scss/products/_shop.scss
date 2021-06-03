@@ -1,0 +1,252 @@
+.shop {
+  width: 100%;
+  padding-top: 125px;
+
+  &__inner {
+    display: flex;
+    column-gap: 30px;
+    margin-bottom: 120px;
+  }
+}
+
+.filters {
+  max-width: 270px;
+  width: 100%;
+
+  &__title {
+    text-transform: uppercase;
+    @extend %dmsans-700;
+    font-size: 18px;
+    line-height: 1.2;
+    color: $sliderTitle;
+    padding-right: 56px;
+    position: relative;
+    margin-bottom: 30px;
+
+    &::after {
+      content: "";
+      height: 3px;
+      width: 39px;
+      background-color: $buttonColor;
+      border-radius: 1px;
+      position: absolute;
+      right: 0;
+      top: 10px;
+    }
+  }
+}
+
+
+.filters-category {
+  margin-bottom: 60px;
+
+  &__label {
+    display: block;
+    cursor: pointer;
+  }
+
+  &__input {
+    @extend %checkbox-hidden;
+
+    &:checked+.filters-category__checkbox {
+      background-color: $search-icon-opacity;
+    }
+  }
+
+  &__checkbox {
+    border-radius: 5px;
+    background-color: $backgroundColor;
+    color: $sliderTitle;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 22px 15px 14px;
+
+    span {
+      svg {
+        width: 7px;
+        height: 12px;
+        fill: $sliderTitle;
+      }
+    }
+  }
+}
+
+.filter-price__form {
+  margin-bottom: 89px;
+}
+
+.irs--flat .irs-line {
+  top: 28px;
+  height: 3px;
+  background-color: $buttonColor;
+  border-radius: 1px;
+  opacity: 0.65;
+}
+
+.irs--flat .irs-handle {
+  top: 22px;
+  width: 15px;
+  height: 15px;
+  background-color: $buttonColor;
+}
+
+.irs--flat .irs-handle>i:first-child {
+  display: none;
+}
+
+.irs--flat .irs-bar {
+  top: 28px;
+  height: 4px;
+  background-color: $buttonColor;
+}
+
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+  display: none;
+}
+
+.irs--flat .irs-from,
+.irs--flat .irs-to,
+.irs--flat .irs-single {
+  @extend %rubik-400;
+  top: 48px;
+  padding: 1px 3px;
+  color: $sliderTitle;
+  font-size: 14px;
+  line-height: 3.1;
+  background-color: transparent;
+}
+
+.irs--flat .irs-from:before,
+.irs--flat .irs-to:before,
+.irs--flat .irs-single:before {
+  display: none;
+}
+
+
+.filters-brand {
+  margin-bottom: 60px;
+
+  &__label {
+    display: block;
+    cursor: pointer;
+  }
+
+  &__value {
+    color: $brandCheck;
+  }
+
+  &__input {
+    @extend %checkbox-hidden;
+
+    &:checked+.filters-brand__checkbox {
+      background-color: $search-icon-opacity;
+      color: $sliderTitle;
+    }
+  }
+
+  &__checkbox {
+    border-radius: 5px;
+    background-color: $backgroundColor;
+    color: $sliderTitle;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 22px 15px 14px;
+  }
+
+  &__name {
+    color: $sliderTitle;
+  }
+}
+
+.filters-populars {
+  &__inner {
+    padding-top: 37px;
+  }
+
+  &__link {
+    display: flex;
+    column-gap: 37px;
+
+    &:not(:last-child) {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__content {
+    min-height: 71px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    width: 71px;
+    height: 71px;
+    background-color: $favoritsProduct;
+    border: 2px solid #f2f2f2;
+  }
+
+  &__subtitle {
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 1;
+    color: $favoritesTitle;
+  }
+
+  &__price {
+    @extend %rubik-400;
+    font-size: 15px;
+    line-height: 1.8;
+    color: $favoritesTitle;
+  }
+}
+
+.jq-ry-container {
+  padding: 0;
+}
+
+.shop-content {
+  position: relative;
+
+  &__inner {
+    max-width: 870px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 40px;
+    margin-bottom: 108px;
+  }
+
+  &__filter-buttons {
+    width: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px 20px 30px;
+    margin-left: 30px;
+    position: absolute;
+    top: -70px;
+  }
+
+  &__filter-btn {
+    padding: 0;
+
+    &.shop-content__filter-btn--active {
+      svg {
+        fill: $sliderTitle;
+      }
+    }
+
+
+    svg {
+      fill: $filter;
+      width: 20px;
+      height: 15px;
+    }
+  }
+}

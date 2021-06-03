@@ -23,6 +23,10 @@ $footerText: #7b7b7b;
 $placeholderColor: #234969;
 $input-bg-opacity: rgba(252, 215, 182, 0.2);
 $productsTitle: #191919;
+$brandCheck: #b3b3b3;
+$favoritsProduct: rgba(255, 255, 255, 0.96);
+$favoritesTitle: #333333;
+$products-card-bg: #f2f2f2;
 
 %dmsans-400 {
   font-family: 'DMSans', sans-serif;
@@ -44,6 +48,11 @@ $productsTitle: #191919;
   font-weight: 700;
 }
 
+%rubik-300 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+}
+
 %rubik-400 {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
@@ -60,30 +69,38 @@ $productsTitle: #191919;
 }
 
 @mixin line {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 @mixin line-1 {
   -webkit-line-clamp: 1;
-@include line;
+  @include line;
 }
 
 @mixin line-2 {
   -webkit-line-clamp: 2;
-@include line;
+  @include line;
 }
 
 @mixin line-3 {
   -webkit-line-clamp: 3;
-@include line;
+  @include line;
 }
 
-%bg{
+%bg {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover
+}
+
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
 }
 
 @function max($numbers...) {

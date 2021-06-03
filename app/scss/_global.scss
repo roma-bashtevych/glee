@@ -68,3 +68,95 @@ a {
 .overflow-hidden {
   overflow: hidden;
 }
+
+.top {
+  background-color: $search-icon-opacity;
+  padding: 32px 0 33px;
+  text-align: center;
+
+  &__title {
+    @extend %rubik-300;
+    font-size: 36px;
+    line-height: 1;
+    color: $article-descript;
+  }
+}
+
+.breadcrumbs {
+  display: flex;
+  justify-content: center;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    @extend %myriadpro-400;
+    font-size: 14px;
+    line-height: 1.7;
+    opacity: 0.6;
+    color: $article-descript;
+
+    &:not(:last-child) {
+      padding-right: 21px;
+      position: relative;
+
+      &::before {
+        content: "/";
+        position: absolute;
+        right: 8px;
+      }
+    }
+  }
+
+  &__link {
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.5s ease;
+
+    &:hover {
+       opacity: 0.6;
+      border-color: $article-descript;
+    }
+  }
+}
+
+.pagination {
+  max-width: 275px;
+  margin: 0 auto;
+  display: flex;
+  column-gap: 16px;
+
+  &__list {
+    display: flex;
+    column-gap: 16px;
+  }
+
+  &__link,
+  &__arrows {
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 1.9;
+    color: $sliderTitle;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid $buttonColor;
+    align-items: center;
+    background-color: $backgroundColor;
+    transition: background-color 0.5s ease,
+      color 0.5s ease;
+
+    &:hover {
+      background-color: $buttonColor;
+      color: $backgroundColor;
+    }
+  }
+   &__arrows{
+     width: 74px;
+   }
+}
+
+.products-card--list + .pagination {
+  margin: 0;
+}
