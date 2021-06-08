@@ -3,6 +3,7 @@ body {
   background-color: $backgroundColor;
   font-size: 16px;
   line-height: 1.9;
+  color: $sliderTitle;
 }
 
 button {
@@ -63,110 +64,68 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 25px 20px;
+
+  &--slider {
+    margin-bottom: 25px;
+    max-width: 200px;
+    background-color: $buttonColor;
+    color: $backgroundColor;
+    position: relative;
+    transition: background-color 0.5s ease,
+      color 0.5s ease;
+
+    svg {
+      width: 22px;
+      height: 9px;
+      fill: $backgroundColor;
+      transition: fill 0.5s ease;
+    }
+
+    &:hover svg {
+      fill: $slider-bg;
+    }
+
+    @include _768 {
+      max-width: 150px;
+      margin: 0 auto 20px;
+    }
+
+    &:hover {
+      color: $slider-bg;
+      background-color: $placeholderColor;
+    }
+  }
+
+  &--more {
+    max-width: 180px;
+    border: 1px solid $menu;
+    border-radius: 5px;
+    color: $menu;
+    transition: background-color 0.5s ease;
+    margin-bottom: 18px;
+
+    @include _576 {
+      margin-bottom: 10px;
+      max-width: 117px;
+      height: 36px;
+    }
+
+    svg {
+      width: 22px;
+      height: 9px;
+      fill: $menu;
+
+      @include _576 {
+        display: none;
+      }
+    }
+
+    &:hover {
+      background-color: $slider-bg;
+    }
+  }
 }
 
 .overflow-hidden {
   overflow: hidden;
-}
-
-.top {
-  background-color: $search-icon-opacity;
-  padding: 32px 0 33px;
-  text-align: center;
-
-  &__title {
-    @extend %rubik-300;
-    font-size: 36px;
-    line-height: 1;
-    color: $article-descript;
-
-    @include _768{
-      font-size: 25px;
-    }
-  }
-}
-
-.breadcrumbs {
-  display: flex;
-  justify-content: center;
-
-  &__list {
-    display: flex;
-  }
-
-  &__item {
-    @extend %myriadpro-400;
-    font-size: 18px;
-    line-height: 1.7;
-    opacity: 0.6;
-    color: $article-descript;
-
-    &:not(:last-child) {
-      padding-right: 21px;
-      position: relative;
-
-      &::before {
-        content: "/";
-        position: absolute;
-        right: 8px;
-      }
-    }
-  }
-
-  &__link {
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.5s ease;
-
-    &:hover {
-       opacity: 0.6;
-      border-color: $article-descript;
-    }
-  }
-}
-
-.pagination {
-  max-width: 275px;
-  margin: 0 auto;
-  display: flex;
-  column-gap: 16px;
-
-  @include _576{
-    flex-wrap: wrap;
-    row-gap: 16px;
-    justify-content: center;
-  }
-
-  &__list {
-    display: flex;
-    column-gap: 16px;
-  }
-
-  &__link,
-  &__arrows {
-    @extend %rubik-400;
-    font-size: 16px;
-    line-height: 1.9;
-    color: $sliderTitle;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    border: 1px solid $buttonColor;
-    align-items: center;
-    background-color: $backgroundColor;
-    transition: background-color 0.5s ease,
-      color 0.5s ease;
-
-    &:hover {
-      background-color: $buttonColor;
-      color: $backgroundColor;
-    }
-  }
-   &__arrows{
-     width: 74px;
-   }
-}
-
-.products-card--list + .pagination {
-  margin: 0;
 }

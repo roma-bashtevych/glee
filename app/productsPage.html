@@ -5,13 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products</title>
+  <title>Products page | Glee</title>
   <link rel="icon" href="images/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-
   <header>
     <div class="container">
       <nav class="menu">
@@ -79,10 +78,11 @@
     </div>
   </header>
   <main>
-    <section class="top">
+    <section class="breadcrumbs">
       <div class="container">
-        <h2 class="top__title">Product list</h2>
-        <div class="breadcrumbs">
+        <h2 class="breadcrumbs__title">Product list</h2>
+
+        <div class="breadcrumbs__inner">
           <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item">
               <a class="breadcrumbs__link" href="#">
@@ -90,9 +90,9 @@
               </a>
             </li>
             <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">
+              <span class="breadcrumbs__link-active">
                 Product list
-              </a>
+              </span>
             </li>
           </ul>
         </div>
@@ -105,171 +105,179 @@
 
           <div class="filters">
 
-            <div class="filters-category">
-              <div class="filters__inner">
-                <span class="filters-category__title filters__title">Category</span>
+            <button class="filters__btn">
+              Filters
+              <svg>
+                <use xlink:href="images/icon/sprite.svg#filter"></use>
+              </svg>
+            </button>
+            <div class="filters__inner">
+              <div class="filters-category">
+                <div class="filters__inner">
+                  <span class="filters-category__title filters__title">Category</span>
+                </div>
+                <form class="filters-category__form" action="#">
+                  <label class="filters-category__label">
+                    <input class="filters-category__input" type="checkbox" checked>
+                    <div class="filters-category__checkbox">
+                      <span>Chair</span>
+                      <span>
+                        <svg>
+                          <use xlink:href="images/icon/sprite.svg#arrow-right"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </label>
+                  <label class="filters-category__label">
+                    <input class="filters-category__input" type="checkbox">
+                    <div class="filters-category__checkbox">
+                      <span>Table</span>
+                      <span>
+                        <svg>
+                          <use xlink:href="images/icon/sprite.svg#arrow-right"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </label>
+                  <label class="filters-category__label">
+                    <input class="filters-category__input" type="checkbox">
+                    <div class="filters-category__checkbox">
+                      <span>Lamp</span>
+                      <span>
+                        <svg>
+                          <use xlink:href="images/icon/sprite.svg#arrow-right"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </label>
+                  <label class="filters-category__label">
+                    <input class="filters-category__input" type="checkbox">
+                    <div class="filters-category__checkbox">
+                      <span>Watch</span>
+                      <span>
+                        <svg>
+                          <use xlink:href="images/icon/sprite.svg#arrow-right"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </label>
+                  <label class="filters-category__label">
+                    <input class="filters-category__input" type="checkbox">
+                    <div class="filters-category__checkbox">
+                      <span>Clock</span>
+                      <span>
+                        <svg>
+                          <use xlink:href="images/icon/sprite.svg#arrow-right"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </label>
+                </form>
               </div>
-              <form class="filters-category__form" action="#">
-                <label class="filters-category__label">
-                  <input class="filters-category__input" type="checkbox" checked>
-                  <div class="filters-category__checkbox">
-                    <span>Chair</span>
-                    <span>
-                      <svg>
-                        <use xlink:href="images/icon/sprite.svg#arrow-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </label>
-                <label class="filters-category__label">
-                  <input class="filters-category__input" type="checkbox">
-                  <div class="filters-category__checkbox">
-                    <span>Table</span>
-                    <span>
-                      <svg>
-                        <use xlink:href="images/icon/sprite.svg#arrow-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </label>
-                <label class="filters-category__label">
-                  <input class="filters-category__input" type="checkbox">
-                  <div class="filters-category__checkbox">
-                    <span>Lamp</span>
-                    <span>
-                      <svg>
-                        <use xlink:href="images/icon/sprite.svg#arrow-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </label>
-                <label class="filters-category__label">
-                  <input class="filters-category__input" type="checkbox">
-                  <div class="filters-category__checkbox">
-                    <span>Watch</span>
-                    <span>
-                      <svg>
-                        <use xlink:href="images/icon/sprite.svg#arrow-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </label>
-                <label class="filters-category__label">
-                  <input class="filters-category__input" type="checkbox">
-                  <div class="filters-category__checkbox">
-                    <span>Clock</span>
-                    <span>
-                      <svg>
-                        <use xlink:href="images/icon/sprite.svg#arrow-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </label>
-              </form>
-            </div>
 
-            <div class="filters-price">
-              <div class="filters__inner">
-                <span class="filters-price__title filters__title">Price</span>
+              <div class="filters-price">
+                <div class="filters__inner">
+                  <span class="filters-price__title filters__title">Price</span>
+                </div>
+                <form class="filter-price__form" action="#">
+                  <label for="" class="filter-price__label">
+                    <input class="filter-price__input" type="text" data-min="0" data-max="900" data-from="100"
+                      data-to="500">
+                  </label>
+                </form>
               </div>
-              <form class="filter-price__form" action="#">
-                <label for="" class="filter-price__label">
-                  <input class="filter-price__input" type="text" data-min="0" data-max="900" data-from="100"
-                    data-to="500">
-                </label>
-              </form>
-            </div>
 
-            <div class="filters-brand">
-              <div class="filters__inner">
-                <span class="filters-brand__title filters__title">Brand</span>
+              <div class="filters-brand">
+                <div class="filters__inner">
+                  <span class="filters-brand__title filters__title">Brand</span>
+                </div>
+                <form class="filters-brand__form" action="#">
+                  <label class="filters-brand__label">
+                    <input class="filters-brand__input" type="checkbox" checked>
+                    <div class="filters-brand__checkbox">
+                      <span class="filters-brand__name">RFL</span>
+                      <span class="filters-brand__value">
+                        (10)
+                      </span>
+                    </div>
+                  </label>
+                  <label class="filters-brand__label">
+                    <input class="filters-brand__input" type="checkbox">
+                    <div class="filters-brand__checkbox">
+                      <span class="filters-brand__name">Brothers</span>
+                      <span class="filters-brand__value">
+                        (21)
+                      </span>
+                    </div>
+                  </label>
+                  <label class="filters-brand__label">
+                    <input class="filters-brand__input" type="checkbox">
+                    <div class="filters-brand__checkbox">
+                      <span class="filters-brand__name">Regal</span>
+                      <span class="filters-brand__value">
+                        (3)
+                      </span>
+                    </div>
+                  </label>
+                  <label class="filters-brand__label">
+                    <input class="filters-brand__input" type="checkbox">
+                    <div class="filters-brand__checkbox">
+                      <span class="filters-brand__name">Nadia</span>
+                      <span class="filters-brand__value">
+                        (14)
+                      </span>
+                    </div>
+                  </label>
+                  <label class="filters-brand__label">
+                    <input class="filters-brand__input" type="checkbox">
+                    <div class="filters-brand__checkbox">
+                      <span class="filters-brand__name">Otobi</span>
+                      <span class="filters-brand__value">
+                        (6)
+                      </span>
+                    </div>
+                  </label>
+                </form>
               </div>
-              <form class="filters-brand__form" action="#">
-                <label class="filters-brand__label">
-                  <input class="filters-brand__input" type="checkbox" checked>
-                  <div class="filters-brand__checkbox">
-                    <span class="filters-brand__name">RFL</span>
-                    <span class="filters-brand__value">
-                      (10)
-                    </span>
-                  </div>
-                </label>
-                <label class="filters-brand__label">
-                  <input class="filters-brand__input" type="checkbox">
-                  <div class="filters-brand__checkbox">
-                    <span class="filters-brand__name">Brothers</span>
-                    <span class="filters-brand__value">
-                      (21)
-                    </span>
-                  </div>
-                </label>
-                <label class="filters-brand__label">
-                  <input class="filters-brand__input" type="checkbox">
-                  <div class="filters-brand__checkbox">
-                    <span class="filters-brand__name">Regal</span>
-                    <span class="filters-brand__value">
-                      (3)
-                    </span>
-                  </div>
-                </label>
-                <label class="filters-brand__label">
-                  <input class="filters-brand__input" type="checkbox">
-                  <div class="filters-brand__checkbox">
-                    <span class="filters-brand__name">Nadia</span>
-                    <span class="filters-brand__value">
-                      (14)
-                    </span>
-                  </div>
-                </label>
-                <label class="filters-brand__label">
-                  <input class="filters-brand__input" type="checkbox">
-                  <div class="filters-brand__checkbox">
-                    <span class="filters-brand__name">Otobi</span>
-                    <span class="filters-brand__value">
-                      (6)
-                    </span>
-                  </div>
-                </label>
-              </form>
-            </div>
 
-            <div class="filters-populars">
-              <div class="filters__inner">
-                <span class="filters-populars__title filters__title">Recent products</span>
-              </div>
-              <div class="filters-populars__inner">
-                <a class="filters-populars__link" href="#">
-                  <div class="filters-populars__image">
-                    <img class="filters-populars__img" src="images/shop/lamp1.png" alt="favorites lamp">
-                  </div>
-                  <div class="filters-populars__content">
-                    <span class="filters-populars__subtitle">Pendant lamp</span>
-                    <div class="star" data-rateyo-rating="4"></div>
-                    <span class="filters-populars__price">23$</span>
-                  </div>
-                </a>
+              <div class="filters-populars">
+                <div class="filters__inner">
+                  <span class="filters-populars__title filters__title">Recent products</span>
+                </div>
+                <ul class="filters-populars__list">
+                  <li class="filters-populars__item" href="#">
+                    <a class="filters-populars__image" href="#">
+                      <img class="filters-populars__img" src="images/shop/lamp1.png" alt="favorites lamp">
+                    </a>
+                    <div class="filters-populars__content">
+                      <a class="filters-populars__subtitle" href="#">Pendant lamp</a>
+                      <div class="star" data-rateyo-rating="4"></div>
+                      <span class="filters-populars__price">23$</span>
+                    </div>
+                  </li>
 
-                <a class="filters-populars__link" href="#">
-                  <div class="filters-populars__image">
-                    <img class="filters-populars__img" src="images/shop/lamp2.png" alt="favorites lamp">
-                  </div>
-                  <div class="filters-populars__content">
-                    <span class="filters-populars__subtitle">Pendant lamp</span>
-                    <div class="star" data-rateyo-rating="4"></div>
-                    <span class="filters-populars__price">23$</span>
-                  </div>
-                </a>
+                  <li class="filters-populars__item" href="#">
+                    <a class="filters-populars__image" href="#">
+                      <img class="filters-populars__img" src="images/shop/lamp2.png" alt="favorites lamp">
+                    </a>
+                    <div class="filters-populars__content">
+                      <a class="filters-populars__subtitle" href="#">Pendant lamp</a>
+                      <div class="star" data-rateyo-rating="4"></div>
+                      <span class="filters-populars__price">23$</span>
+                    </div>
+                  </li>
 
-                <a class="filters-populars__link" href="#">
-                  <div class="filters-populars__image">
-                    <img class="filters-populars__img" src="images/shop/lamp3.png" alt="favorites lamp">
-                  </div>
-                  <div class="filters-populars__content">
-                    <span class="filters-populars__subtitle">Pendant lamp</span>
-                    <div class="star" data-rateyo-rating="4"></div>
-                    <span class="filters-populars__price">23$</span>
-                  </div>
-                </a>
+                  <li class="filters-populars__item" href="#">
+                    <a class="filters-populars__image" href="#">
+                      <img class="filters-populars__img" src="images/shop/lamp3.png" alt="favorites lamp">
+                    </a>
+                    <div class="filters-populars__content">
+                      <a class="filters-populars__subtitle" href="#">Pendant lamp</a>
+                      <div class="star" data-rateyo-rating="4"></div>
+                      <span class="filters-populars__price">23$</span>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -834,9 +842,10 @@
                 <li class="pagination__item">
                   <a class="pagination__link" href="#">3</a>
                 </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">Next</a>
+                </li>
               </ul>
-              <a class="pagination__next pagination__arrows" href="#">Next</a>
-
             </div>
           </div>
         </div>
@@ -898,9 +907,9 @@
           </ul>
         </div>
       </div>
-
     </section>
   </main>
+
   <footer class="footer">
     <div class="container container--content">
       <h2 class="sr-only">Footer</h2>

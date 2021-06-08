@@ -27,6 +27,12 @@ $brandCheck: #b3b3b3;
 $favoritsProduct: rgba(255, 255, 255, 0.96);
 $favoritesTitle: #333333;
 $products-card-bg: #f2f2f2;
+$about-border: rgba(9, 49, 111, 0.1);
+$search-icon-opacity-hover: rgba(163, 187, 200, 0.1);
+$about-sub: #4c4c4c;
+$social-fill: #888888;
+$portfolio-subtitle: #565872;
+$social-bg: #f6f6f6;
 
 %dmsans-400 {
   font-family: 'DMSans', sans-serif;
@@ -61,6 +67,11 @@ $products-card-bg: #f2f2f2;
 %rubik-500 {
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
+}
+
+%rubik-700 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
 }
 
 %myriadpro-400 {

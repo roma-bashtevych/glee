@@ -136,37 +136,6 @@
    }
  }
 
- .button {
-   &--more {
-     max-width: 180px;
-     border: 1px solid $menu;
-     border-radius: 5px;
-     color: $menu;
-     transition: background-color 0.5s ease;
-     margin-bottom: 18px;
-
-     @include _576 {
-       margin-bottom: 10px;
-       max-width: 117px;
-       height: 36px;
-     }
-
-     svg {
-       width: 22px;
-       height: 9px;
-       fill: $menu;
-
-       @include _576 {
-         display: none;
-       }
-     }
-
-     &:hover {
-       background-color: $slider-bg;
-     }
-   }
- }
-
  .products-card {
    width: 270px;
    height: 380px;

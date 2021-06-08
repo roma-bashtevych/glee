@@ -104,7 +104,6 @@
     @include _992 {
       padding-top: 120px;
       max-width: 100%;
-      left: -15px;
     }
 
     &--active {
@@ -295,7 +294,7 @@
     }
 
     @include _576 {
-      top: 0px;
+      top: 0;
       left: 25px;
     }
   }

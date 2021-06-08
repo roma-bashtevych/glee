@@ -12,6 +12,7 @@ const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
 const browserSync = require('browser-sync').create();
+// const fileinclude = require('gulp-file-include');
 
 
 function browsersync() {
@@ -26,8 +27,13 @@ function browsersync() {
 function styles() {
   return src([
       'node_modules/slick-carousel/slick/slick.scss',
-      'app/scss/style.scss'
+      'app/scss/style.scss',
+      // 'index.html'
     ])
+      //  .pipe(fileinclude({
+      //    prefix: '@@',
+      //    basepath: '@file'
+      //  }))
     .pipe(scss({
       outputStyle: 'compressed'
     }))
@@ -111,6 +117,7 @@ exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
+// exports.fileinclude = fileinclude;
 
 
 exports.default = parallel(styles, scripts, browsersync, watching)

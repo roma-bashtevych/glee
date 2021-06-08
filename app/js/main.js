@@ -76,6 +76,10 @@ $(function () {
     $('.menu__btn').toggleClass('active');
   });
 
+  $('.filters__btn').on('click', function () {
+    $('.filters__inner').toggleClass('filters__inner--active')
+  });
+
   const mixitup1 = document.querySelector('.design'),
     mixitup2 = document.querySelector('.products'),
     control = {

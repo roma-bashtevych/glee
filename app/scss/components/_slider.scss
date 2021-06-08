@@ -218,36 +218,3 @@
     background-color: $backgroundColor;
   }
 }
-
-.button {
-  &--slider {
-    margin-bottom: 25px;
-    max-width: 200px;
-    background-color: $buttonColor;
-    color: $backgroundColor;
-    position: relative;
-    transition: background-color 0.5s ease,
-      color 0.5s ease;
-
-    svg {
-      width: 22px;
-      height: 9px;
-      fill: $backgroundColor;
-      transition: fill 0.5s ease;
-    }
-
-    &:hover svg {
-      fill: $slider-bg;
-    }
-
-    @include _768 {
-      max-width: 150px;
-      margin: 0 auto 20px;
-    }
-
-    &:hover {
-      color: $slider-bg;
-      background-color: $placeholderColor;
-    }
-  }
-}

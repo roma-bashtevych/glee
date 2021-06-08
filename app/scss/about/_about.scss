@@ -1,0 +1,274 @@
+.about {
+  padding-top: 120px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    column-gap: 48px;
+    margin-bottom: 120px;
+  }
+
+  &__img {
+    max-width: 570px;
+    min-height: 676px;
+  }
+
+  &__years {
+    display: flex;
+    column-gap: 29px;
+    // margin-bottom: 53px;
+    align-items: center;
+
+    p {
+      max-width: 85px;
+      @extend %rubik-400;
+      font-size: 16px;
+      line-height: 1.9;
+    }
+  }
+
+  &__years-num {
+    @extend %rubik-700;
+    font-size: 140px;
+    line-height: 1;
+    color: $buttonColor;
+  }
+
+  &__title {
+    @extend %dmsans-700;
+    font-size: 36px;
+    line-height: 1;
+    margin-bottom: 51px;
+  }
+
+  &__text {
+    p {
+      @extend %rubik-400;
+      line-height: 1.9;
+      margin-bottom: 64px;
+    }
+  }
+
+  &__list {
+    padding-top: 39px;
+    border-top: 3px solid $about-border;
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+    @extend %dmsans-700;
+  }
+
+  &__item {
+    padding-left: 57px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &::before {
+      content: "";
+      @extend %bg;
+      position: absolute;
+      left: 0;
+      top: 10px;
+    }
+
+    &--proj::before {
+      background-image: url('../images/about/about-icon1.svg');
+      width: 37px;
+      height: 38px;
+    }
+
+    &--rev::before {
+      background-image: url('../images/about/about-icon2.svg');
+      width: 44px;
+      height: 40px;
+    }
+
+    &--awar::before {
+      background-image: url('../images/about/about-icon3.svg');
+      width: 43px;
+      height: 42px;
+    }
+
+    &:not(:last-child) {
+      padding-right: 26px;
+      border-right: 1px solid $about-border;
+    }
+  }
+
+  &__num {
+    font-size: 36px;
+    line-height: 1.1;
+  }
+
+  &__sub {
+    color: $about-sub;
+  }
+}
+
+.description {
+  background-color: $slider-bg;
+
+  &__list {
+    min-height: 323px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__content {
+    padding-top: 87px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    @extend %dmsans-700;
+    position: relative;
+
+    &::before {
+      content: "";
+      @extend %bg;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 9%;
+
+    }
+
+    &--rate::before {
+      background-image: url('../images/about/descript1.svg');
+      width: 64px;
+      height: 57px;
+    }
+
+    &--delive::before {
+      background-image: url('../images/about/descript2.svg');
+      width: 71px;
+      height: 51px;
+    }
+
+    &--time::before {
+      background-image: url('../images/about/descript3.svg');
+      width: 81px;
+      height: 67px;
+    }
+
+    &--brand::before {
+      background-image: url('../images/about/descript4.svg');
+      width: 60px;
+      height: 64px;
+    }
+  }
+
+  &__num {
+    font-size: 36px;
+    line-height: 1;
+    margin-bottom: 27px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+}
+
+.team {
+  padding-top: 120px;
+
+  &__inner {
+    display: flex;
+    column-gap: 98px;
+  }
+
+  &__content {
+    max-width: 303px;
+    color: $sliderTitle;
+
+    p {
+      @extend %rubik-400;
+      margin-bottom: 41px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 38px;
+  }
+
+  &__button {
+    @extend %poppins-700;
+    font-size: 15px;
+    line-height: 3.6;
+    color: $backgroundColor;
+    background-color: $buttonColor;
+    border-radius: 5px;
+    padding: 0 18px 0 26px;
+
+    svg {
+      width: 15px;
+      height: 11px;
+      fill: $backgroundColor;
+    }
+  }
+}
+
+.portfolio {
+  &__img{
+    max-width: 370px;
+    min-height: 320px;
+    object-fit: cover;
+  }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 29px;
+  }
+  &__content {
+    transform: translateY(-50px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 31px 21px 28px 25px;
+    max-width: 325px;
+    min-height: 111px;
+    background-color: $backgroundColor;
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+  }
+
+  &__name {
+    @extend %dmsans-700;
+    font-size: 22px;
+    line-height: 1.2;
+    color: $menu;
+  }
+
+  &__position {
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 1.9;
+    color: $portfolio-subtitle;
+  }
+
+  &__team {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__social {
+    display: flex;
+    column-gap: 7px;
+  }
+
+  &__link {
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    background-color: $social-bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      width: 20px;
+      height: 18px;
+      fill: $social-fill;
+    }
+  }
+}
