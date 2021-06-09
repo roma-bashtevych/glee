@@ -80,6 +80,14 @@ $(function () {
     $('.filters__inner').toggleClass('filters__inner--active')
   });
 
+  // $(window).scroll(function () {
+  //   if ($(this).scrollTop() > 1) {
+  //     $('.menu').addClass("sticky");
+  //   } else {
+  //     $('.menu').removeClass("sticky");
+  //   }
+  // });
+
   const mixitup1 = document.querySelector('.design'),
     mixitup2 = document.querySelector('.products'),
     control = {

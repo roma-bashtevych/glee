@@ -1,22 +1,46 @@
 .about {
   padding-top: 120px;
 
+  @include _992 {
+    padding-top: 90px;
+  }
+
+  @include _576 {
+    padding-top: 40px;
+  }
+
   &__inner {
     display: flex;
     align-items: center;
     column-gap: 48px;
     margin-bottom: 120px;
+
+    @include _1200 {
+      flex-direction: column;
+    }
   }
 
   &__img {
     max-width: 570px;
     min-height: 676px;
+
+    @include _1200 {
+      margin-bottom: 30px;
+    }
+
+    @include _768 {
+      max-width: 375px;
+      min-height: 100%;
+    }
+
+    @include _576 {
+      display: none;
+    }
   }
 
   &__years {
     display: flex;
-    column-gap: 29px;
-    // margin-bottom: 53px;
+    column-gap: 24px;
     align-items: center;
 
     p {
@@ -24,6 +48,10 @@
       @extend %rubik-400;
       font-size: 16px;
       line-height: 1.9;
+
+      @include _576 {
+        line-height: 1.2;
+      }
     }
   }
 
@@ -32,6 +60,10 @@
     font-size: 140px;
     line-height: 1;
     color: $buttonColor;
+
+    @include _576 {
+      font-size: 74px;
+    }
   }
 
   &__title {
@@ -39,6 +71,11 @@
     font-size: 36px;
     line-height: 1;
     margin-bottom: 51px;
+
+    @include _768 {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
   }
 
   &__text {
@@ -46,6 +83,10 @@
       @extend %rubik-400;
       line-height: 1.9;
       margin-bottom: 64px;
+
+      @include _768 {
+        margin-bottom: 20px;
+      }
     }
   }
 
@@ -56,6 +97,18 @@
     justify-content: space-between;
     max-width: 500px;
     @extend %dmsans-700;
+
+    @include _1200 {
+      margin: 0 auto;
+    }
+
+    @include _576 {
+      padding-top: 0;
+      border-top: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 100%;
+    }
   }
 
   &__item {
@@ -63,6 +116,10 @@
     display: flex;
     flex-direction: column;
     position: relative;
+
+    @include _576 {
+      padding: 0 10px 0 57px;
+    }
 
     &::before {
       content: "";
@@ -93,6 +150,12 @@
     &:not(:last-child) {
       padding-right: 26px;
       border-right: 1px solid $about-border;
+
+      @include _576 {
+
+        margin-bottom: 20px;
+        border-right: none;
+      }
     }
   }
 
@@ -110,10 +173,19 @@
   background-color: $slider-bg;
 
   &__list {
-    min-height: 323px;
+    max-width: 1100px;
+    margin: 0 auto;
+    min-height: 320px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include _1200 {
+      min-height: 280px;
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 40px;
+    }
   }
 
   &__content {
@@ -162,7 +234,12 @@
   &__num {
     font-size: 36px;
     line-height: 1;
-    margin-bottom: 27px;
+    margin-bottom: 18px;
+
+    @include _768 {
+      margin-bottom: 10px;
+      font-size: 25px;
+    }
   }
 
   &__text {
@@ -177,20 +254,30 @@
   &__inner {
     display: flex;
     column-gap: 98px;
+
+    @include _1200 {
+      flex-wrap: wrap;
+    }
   }
 
   &__content {
     max-width: 303px;
     color: $sliderTitle;
 
+    @include _1200 {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
     p {
       @extend %rubik-400;
-      margin-bottom: 41px;
+      margin-bottom: 33px;
     }
   }
 
   &__title {
-    margin-bottom: 38px;
+    text-align: left;
+    margin-bottom: 15px;
   }
 
   &__button {
@@ -200,7 +287,12 @@
     color: $backgroundColor;
     background-color: $buttonColor;
     border-radius: 5px;
-    padding: 0 18px 0 26px;
+    padding: 0 28px 0 26px;
+    transition: background-color 0.5s ease;
+
+    &:hover{
+      background-color: $sliderTitle;
+    }
 
     svg {
       width: 15px;
@@ -211,16 +303,31 @@
 }
 
 .portfolio {
-  &__img{
+  &__img {
     max-width: 370px;
     min-height: 320px;
     object-fit: cover;
+    position: relative;
+
+    @include _992 {
+      max-width: 310px;
+    }
+
+    @include _768 {
+      max-width: 270px;
+    }
   }
-  &__list{
+
+  &__list {
     display: flex;
     flex-wrap: wrap;
     column-gap: 29px;
+
+    @include _1200 {
+      justify-content: center;
+    }
   }
+
   &__content {
     transform: translateY(-50px);
     display: flex;
@@ -265,10 +372,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.5s ease;
+
+    &:hover {
+      background-color: $buttonColor;
+
+      svg {
+        fill: $sliderTitle;
+      }
+    }
+
     svg {
       width: 20px;
       height: 18px;
       fill: $social-fill;
+      transition: fill 0.5s ease;
     }
   }
 }
