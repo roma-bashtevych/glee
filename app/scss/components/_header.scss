@@ -1,3 +1,17 @@
+.header{
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background-color: $backgroundColor;
+
+  @include _1200 {
+    min-height: 85px;
+  }
+
+  @include _992 {
+    min-height: 65px;
+  }
+}
 .menu {
   min-height: 145px;
   display: flex;

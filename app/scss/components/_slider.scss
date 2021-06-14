@@ -1,4 +1,12 @@
 .slider {
+  padding-top: 145px;
+    @include _1200 {
+      padding-top: 85px;
+    }
+
+    @include _992 {
+      padding-top: 65px;
+    }
   &__list {
     background-color: $slider-bg;
     position: relative;

@@ -23,17 +23,20 @@ function browsersync() {
   })
 }
 
+// function fileInclude() {
+//   return src(['index.html'])
+//   .pipe(fileinclude({
+//     prefix: '@@',
+//     basepath: '@file'
+//   }))
+//   .pipe(gulp.dest('app/'));
+// }
 
 function styles() {
   return src([
       'node_modules/slick-carousel/slick/slick.scss',
       'app/scss/style.scss',
-      // 'index.html'
     ])
-      //  .pipe(fileinclude({
-      //    prefix: '@@',
-      //    basepath: '@file'
-      //  }))
     .pipe(scss({
       outputStyle: 'compressed'
     }))
@@ -106,6 +109,7 @@ function cleanDist() {
 
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
+    // watch(['app/html/**/*.html'], fileinclude);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload)
 }
@@ -117,7 +121,7 @@ exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
-// exports.fileinclude = fileinclude;
+// exports.fileInclude = fileInclude;
 
 
 exports.default = parallel(styles, scripts, browsersync, watching)
