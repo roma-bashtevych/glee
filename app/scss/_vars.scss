@@ -33,6 +33,9 @@ $about-sub: #4c4c4c;
 $social-fill: #888888;
 $portfolio-subtitle: #565872;
 $social-bg: #f6f6f6;
+$dataBlog: #9a9a9a;
+$searchBtn: #edf1f4;
+$btnSearch: #094074;
 
 %dmsans-400 {
   font-family: 'DMSans', sans-serif;
@@ -97,6 +100,11 @@ $social-bg: #f6f6f6;
 
 @mixin line-3 {
   -webkit-line-clamp: 3;
+  @include line;
+}
+
+@mixin line-5 {
+  -webkit-line-clamp: 5;
   @include line;
 }
 

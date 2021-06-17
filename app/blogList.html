@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog List | Glee</title>
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="menu">
+        <a href="#">
+          <img class="logo logo--menu" src="images/logo/logo.svg" alt="Logo">
+        </a>
+
+        <button class="menu__btn" type="button">
+          <span class="sr-only">Open menu</span>
+          <span class="menu__line menu__line--top"></span>
+          <span class="menu__line menu__line--center"></span>
+          <span class="menu__line menu__line--bottom"></span>
+        </button>
+
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#">Home+</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">About</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Services</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Pages+</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">News</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Contact</a>
+          </li>
+        </ul>
+
+        <div class="user-nav">
+          <button class="user-nav__link user-nav__link--search" type="button">
+            <span class="sr-only">Open search bar</span>
+            <svg class="user-nav__icon user-nav__icon--search">
+              <use xlink:href="images/icon/sprite.svg#search"></use>
+            </svg>
+          </button>
+          <a class="user-nav__link user-nav__link--like" href="#">
+            <span class="sr-only">Open favorites</span>
+            <div class="user-nav__num">0</div>
+            <svg class="user-nav__icon user-nav__icon--like">
+              <use xlink:href="images/icon/sprite.svg#like"></use>
+            </svg>
+          </a>
+          <a class="user-nav__link user-nav__link--basket" href="#">
+            <span class="sr-only">Open basket</span>
+            <div class="user-nav__num">0</div>
+            <svg class="user-nav__icon user-nav__icon--basket">
+              <use xlink:href="images/icon/sprite.svg#basket"></use>
+            </svg>
+          </a>
+          <button class="user-nav__link user-nav__link--points" type="button">
+            <span class="sr-only">Change layout</span>
+            <svg class="user-nav__icon user-nav__icon--points">
+              <use xlink:href="images/icon/sprite.svg#points"></use>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="breadcrumbs">
+      <div class="container">
+        <h2 class="breadcrumbs__title">Blog</h2>
+
+        <div class="breadcrumbs__inner">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">
+                Home
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <span class="breadcrumbs__link-active">
+                Blog
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog">
+      <div class="container container--content">
+        <div class="blog__inner">
+          <div class="blog__content">
+            <ul class="blog__list">
+              <li class="blog__item">
+                <div class="blog__images">
+                  <a class="blog__link" href="#">
+                    <img class="blog__img" src="images/blog-list/blog_list1.jpg" alt="">
+                  </a>
+                  <div class="blog__autors">
+                    <div class="blog__details">
+                      <time class="blog__data" datetime="2020-01-28">
+                        <svg>
+                          <use xlink:href="images/icon/sprite.svg#calendar"></use>
+                        </svg>
+                        28 january, 2020</time>
+                      <span class="blog__data">
+                        <svg>
+                          <use xlink:href="images/icon/sprite.svg#user"></use>
+                        </svg>
+                        By admin</span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="blog__title">Fonsectetur adipisicing eiusmod</h3>
+                <div class="blog__text">
+                  <p>
+                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit
+                    amet, consectetur adipicing elit, set do eiusmod tempor incididunt ut labore et dolore magna
+                  </p>
+                </div>
+                <a class="button button--more button--more-blog" href="#">View More
+                  <svg>
+                    <use xlink:href="images/icon/sprite.svg#arrow"></use>
+                  </svg>
+                </a>
+
+              </li>
+              <li class="blog__item">
+                <div class="blog__images">
+                  <a class="blog__link" href="#">
+                    <img class="blog__img" src="images/blog-list/blog_list2.jpg" alt="">
+                  </a>
+                  <div class="blog__autors">
+                    <div class="blog__details">
+                      <time class="blog__data" datetime="2020-01-28">
+                        <svg>
+                          <use xlink:href="images/icon/sprite.svg#calendar"></use>
+                        </svg>
+                        28 january, 2020</time>
+                      <span class="blog__data">
+                        <svg>
+                          <use xlink:href="images/icon/sprite.svg#user"></use>
+                        </svg>
+                        By admin</span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="blog__title">Fonsectetur adipisicing eiusmod</h3>
+                <div class="blog__text">
+                  <p>
+                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit
+                    amet, consectetur adipicing elit, set do eiusmod tempor incididunt ut labore et dolore magna
+                  </p>
+                </div>
+                <a class="button button--more button--more-blog" href="#">View More
+                  <svg>
+                    <use xlink:href="images/icon/sprite.svg#arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="blog__item">
+                <div class="blog__images">
+                  <a class="blog__link" href="#">
+                    <img class="blog__img" src="images/blog-list/blog_list3.jpg" alt="">
+                  </a>
+                  <div class="blog__autors">
+                    <div class="blog__details">
+                      <time class="blog__data" datetime="2020-01-28">
+                        <svg>
+                          <use xlink:href="images/icon/sprite.svg#calendar"></use>
+                        </svg>
+                        28 january, 2020</time>
+                      <span class="blog__data">
+                        <svg>
+                          <use xlink:href="images/icon/sprite.svg#user"></use>
+                        </svg>
+                        By admin</span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="blog__title">Fsectetur adipisicing tempor incididunt</h3>
+                <div class="blog__text">
+                  <p>
+                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit
+                    amet, consectetur adipicing elit, set do eiusmod tempor incididunt ut labore et dolore magna
+                  </p>
+                </div>
+                <a class="button button--more button--more-blog" href="#">View More
+                  <svg>
+                    <use xlink:href="images/icon/sprite.svg#arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="blog__item">
+                <div class="blog__images">
+                  <a class="blog__link" href="#">
+                    <img class="blog__img" src="images/blog-list/blog_list4.jpg" alt="">
+                  </a>
+                  <div class="blog__autors">
+                    <div class="blog__details">
+                      <time class="blog__data" datetime="2020-01-28">
+                        <svg>
+                          <use xlink:href="images/icon/sprite.svg#calendar"></use>
+                        </svg>
+                        28 january, 2020</time>
+                      <span class="blog__data">
+                        <svg>
+                          <use xlink:href="images/icon/sprite.svg#user"></use>
+                        </svg>
+                        By admin</span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="blog__title">vonsectetur adipisicing elit</h3>
+                <div class="blog__text">
+                  <p>
+                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit
+                    amet, consectetur adipicing elit, set do eiusmod tempor incididunt ut labore et dolore magna
+                  </p>
+                </div>
+                <a class="button button--more button--more-blog" href="#">View More
+                  <svg>
+                    <use xlink:href="images/icon/sprite.svg#arrow"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+
+            <div class="pagination pagination--blog">
+              <ul class="pagination__list">
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">1</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">2</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">3</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">Next</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="filters">
+            <button class="filters__btn">
+              Filters
+              <svg>
+                <use xlink:href="images/icon/sprite.svg#filter"></use>
+              </svg>
+            </button>
+            <div class="filters__inner">
+              <div class="filters-search">
+                <form class="filters-search__form" action="#">
+                  <label for=""></label>
+                  <input class="filters-search__input" type="text">
+                  <label for=""></label>
+                  <button class="filters-search__btn" type="submit">
+                    <svg>
+                      <use xlink:href="images/icon/sprite.svg#search-blog"></use>
+                    </svg>
+                  </button>
+                </form>
+              </div>
+              <div class="filters-category filters-category--blog">
+                <div class="filters__inner filters__inner--blog">
+                  <span class="filters-category__title filters__title">Category</span>
+                </div>
+                <form class="filters-category__form" action="#">
+                  <label class="filters-category__label">
+                    <input class="filters-category__input" type="checkbox" checked>
+                    <div class="filters-category__checkbox">
+                      <span>Chair</span>
+                      <span>
+                        <svg>
+                          <use xlink:href="images/icon/sprite.svg#arrow-right"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </label>
+                  <label class="filters-category__label">
+                    <input class="filters-category__input" type="checkbox">
+                    <div class="filters-category__checkbox">
+                      <span>Table</span>
+                      <span>
+                        <svg>
+                          <use xlink:href="images/icon/sprite.svg#arrow-right"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </label>
+                  <label class="filters-category__label">
+                    <input class="filters-category__input" type="checkbox">
+                    <div class="filters-category__checkbox">
+                      <span>Lamp</span>
+                      <span>
+                        <svg>
+                          <use xlink:href="images/icon/sprite.svg#arrow-right"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </label>
+                  <label class="filters-category__label">
+                    <input class="filters-category__input" type="checkbox">
+                    <div class="filters-category__checkbox">
+                      <span>Watch</span>
+                      <span>
+                        <svg>
+                          <use xlink:href="images/icon/sprite.svg#arrow-right"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </label>
+                  <label class="filters-category__label">
+                    <input class="filters-category__input" type="checkbox">
+                    <div class="filters-category__checkbox">
+                      <span>Clock</span>
+                      <span>
+                        <svg>
+                          <use xlink:href="images/icon/sprite.svg#arrow-right"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </label>
+                </form>
+              </div>
+              <div class="filters-posts">
+                <div class="filters__inner filters__inner--blog">
+                  <span class="filters-category__title filters__title">Recent Posts</span>
+                </div>
+                <ul class="filters-posts__list">
+                  <li class="filters-posts__item">
+                    <a class="filters-posts__link" href="#">
+                      <img class="filters-posts__img" src="images/blog-list/blog_filters1.jpg" alt="">
+                      <div class="filters-posts__content">
+                        <p class="filters-posts__title">
+                          Corem ipsum dolor tetur adipisicing elit
+                        </p>
+                        <time class="filters-posts__data" datetime="2020-01-28">28 january, 2020</time>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="filters-posts__item">
+                    <a class="filters-posts__link" href="#">
+                      <img class="filters-posts__img" src="images/blog-list/blog_filters2.jpg" alt="">
+                      <div class="filters-posts__content">
+                        <p class="filters-posts__title">
+                          Fdipisicing elit, sed do eiusmod tempor
+                        </p>
+                        <time class="filters-posts__data" datetime="2020-01-28">28 january, 2020</time>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="filters-posts__item">
+                    <a class="filters-posts__link" href="#">
+                      <img class="filters-posts__img" src="images/blog-list/blog_filters3.jpg" alt="">
+                      <div class="filters-posts__content">
+                        <p class="filters-posts__title">
+                          Eonsectetur adipisicing elit, sed do eiusmod
+                        </p>
+                        <time class="filters-posts__data" datetime="2020-01-28">28 january, 2020</time>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="filters-posts__item">
+                    <a class="filters-posts__link" href="#">
+                      <img class="filters-posts__img" src="images/blog-list/blog_filters4.jpg" alt="">
+                      <div class="filters-posts__content">
+                        <p class="filters-posts__title">
+                          gnim ad minim veniam, quis nostrud
+                        </p>
+                        <time class="filters-posts__data" datetime="2020-01-28">28 january, 2020</time>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sponsors">
+        <div class="container container--content">
+          <ul class="sponsors__items">
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="#">
+                <img class="sponsors__img" src="images/sponsors/sponsors1.png" alt="peterson and stefaniie">
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="#">
+                <img class="sponsors__img" src="images/sponsors/sponsors2.png" alt="kmn colsalting">
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="#">
+                <img class="sponsors__img" src="images/sponsors/sponsors3.png" alt="chainforse">
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="#">
+                <img class="sponsors__img" src="images/sponsors/sponsors4.png" alt="nextg3n">
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="#">
+                <img class="sponsors__img" src="images/sponsors/sponsors5.png" alt="vintage">
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="#">
+                <img class="sponsors__img" src="images/sponsors/sponsors1.png" alt="peterson and stefaniie">
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="#">
+                <img class="sponsors__img" src="images/sponsors/sponsors2.png" alt="kmn colsalting">
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="#">
+                <img class="sponsors__img" src="images/sponsors/sponsors3.png" alt="chainforse">
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="#">
+                <img class="sponsors__img" src="images/sponsors/sponsors4.png" alt="nextg3n">
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="#">
+                <img class="sponsors__img" src="images/sponsors/sponsors5.png" alt="vintage">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container container--content">
+      <h2 class="sr-only">Footer</h2>
+
+      <div class="footer__top">
+        <div class="footer__items">
+          <div class="footer__item footer__item--contact">
+            <div class="footer__list">
+              <div class="footer__logo">
+                <a href="#">
+                  <img class="logo" src="images/logo/logo.svg" alt="Logo">
+                </a>
+              </div>
+              <address class="footer__info">
+                <ul class="footer__data">
+                  <li class="footer__cont">
+                    <span class="footer__label">Address:</span>
+                    <a class="footer__element footer__element--address" href="#">
+                      4772 Wines Lane Houston, TX 77032
+                    </a>
+                  </li>
+                  <li class="footer__cont">
+                    <span class="footer__label">Telephone:</span>
+                    <a class="footer__element" href="tel:+8323475843">
+                      +832-347-5843
+                    </a>
+                  </li>
+                  <li class="footer__cont">
+                    <span class="footer__label">Email:</span>
+                    <a class="footer__element" href="mailto:contact@Glee.com">
+                      contact@Glee.com
+                    </a>
+                  </li>
+                </ul>
+              </address>
+            </div>
+          </div>
+          <div class="footer__item">
+            <h3 class="footer__title">
+              Services
+            </h3>
+
+            <ul class="footer__list">
+              <li class="footer__element">
+                <a class="footer__link" href="#">
+                  About us
+                </a>
+              </li>
+              <li class="footer__element">
+                <a class="footer__link" href="#">
+                  Return Policy
+                </a>
+              </li>
+              <li class="footer__element">
+                <a class="footer__link" href="#">
+                  Our Blog
+                </a>
+              </li>
+              <li class="footer__element">
+                <a class="footer__link" href="#">
+                  Contact Us
+                </a>
+              </li>
+              <li class="footer__element">
+                <a class="footer__link" href="#">
+                  Terms & Condition
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__item">
+            <h3 class="footer__title">Account</h3>
+
+            <ul class="footer__list">
+              <li class="footer__element">
+                <a class="footer__link" href="#">
+                  Your Account
+                </a>
+              </li>
+              <li class="footer__element">
+                <a class="footer__link" href="#">
+                  Checkout
+                </a>
+              </li>
+              <li class="footer__element">
+                <a class="footer__link" href="#">
+                  Login
+                </a>
+              </li>
+              <li class="footer__element">
+                <a class="footer__link" href="#">
+                  Register
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__item">
+            <h3 class="footer__title">newsletter</h3>
+            <div class="footer__list">
+              <p>Subscribe by our newsletter and get update protidin.</p>
+              <form class="form">
+                <label class="sr-only" for="email">Enter email</label>
+                <input class="form__input" id="email" type="email" placeholder="Email address">
+                <button class="form__btn" type="submit">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__copy">
+            <p>©2020 CopyRight Example. All rights reserved.</p>
+          </div>
+          <nav>
+            <ul class="footer__menu">
+              <li class="footer__elem">
+                <a href="#">
+                  Home
+                </a>
+              </li>
+              <li class="footer__elem">
+                <a href="#">
+                  About
+                </a>
+              </li>
+              <li class="footer__elem">
+                <a href="#">
+                  Blog
+                </a>
+              </li>
+              <li class="footer__elem">
+                <a href="#">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+  </footer>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

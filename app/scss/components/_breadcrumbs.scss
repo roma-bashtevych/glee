@@ -1,8 +1,14 @@
 .breadcrumbs {
   background-color: $search-icon-opacity;
-  padding: 26px 0 33px;
+  padding: 171px 0 33px;
   text-align: center;
 
+
+  @include _1200 {
+    padding-top: 100px;
+  }
+
+ 
   &__title {
     @extend %rubik-300;
     font-size: 36px;
@@ -45,7 +51,7 @@
   &__link {
     border-bottom: 1px solid transparent;
     transition: border-color 0.5s ease,
-    opacity 0.5s ease;
+      opacity 0.5s ease;
 
     &:hover {
       opacity: 0.6;

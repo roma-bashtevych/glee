@@ -64,6 +64,10 @@
   }
 
   &__inner {
+    &--blog {
+      margin-bottom: 37px;
+    }
+
     @include _768 {
       display: none;
     }
@@ -102,6 +106,10 @@
 
 .filters-category {
   margin-bottom: 60px;
+
+  &--blog {
+    margin-bottom: 7px;
+  }
 
   &__label {
     display: block;

@@ -124,6 +124,23 @@ a {
       background-color: $slider-bg;
     }
   }
+    &--more-blog {
+      color: $buttonColor;
+      border-color: $buttonColor;
+      transition: color 0.5s ease;
+      &:hover{
+        background-color: $buttonColor;
+        color: $backgroundColor;
+        svg{
+          fill: $backgroundColor
+        }
+      }
+      svg{
+        fill: $buttonColor;
+        transition: fill 0.5s ease;
+      }
+    }
+
 }
 
 .overflow-hidden {
