@@ -3,26 +3,41 @@
     padding-top: 120px;
     display: flex;
 
+
     @include _768 {
       flex-direction: column;
     }
   }
 
   &__content {
-    @include _768 {
-      order: 2;
+    &--one {
+      @include _1200 {
+        max-width: 60%;
+      }
     }
-  }
 
-  &__list {
-    margin-bottom: 76px;
+    @include _768 {
+      max-width: 100%;
+    }
 
     &:not(:last-child) {
       margin-right: 70px;
 
+      @include _992 {
+        margin-right: 30px;
+      }
+
       @include _768 {
         margin: 0;
       }
+
+      @include _768 {
+        order: 2;
+      }
+    }
+
+    &__list {
+      margin-bottom: 76px;
     }
   }
 
@@ -172,14 +187,17 @@
     line-height: 1.2;
     @extend %dmsans-400;
     color: $buttonColor;
-     padding: 0 15px;
+    padding: 0 15px;
+
+    @include _768 {
+           max-width: 100%;
+    }
 
     &:focus {
       outline-color: $buttonColor;
     }
 
     &::placeholder {
-     
       color: $buttonColor;
     }
   }
@@ -199,7 +217,8 @@
 
     &:hover {
       background-color: $sliderTitle;
-      svg{
+
+      svg {
         fill: $backgroundColor;
       }
     }

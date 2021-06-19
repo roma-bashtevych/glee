@@ -1,0 +1,322 @@
+.blog {
+  &__subtitle {
+    @extend %rubik-500;
+    font-size: 16px;
+    line-height: 1.9;
+    color: $sliderTitle;
+    margin-bottom: 27px;
+  }
+
+  blockquote {
+    background-color: $search-icon-opacity;
+    border-left: 7px solid $buttonColor;
+    padding: 25px 93px 24px 40px;
+    @extend %rubik-400;
+    margin-bottom: 45px;
+
+    cite {
+      display: block;
+      font-style: normal;
+      padding-left: 43px;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 20px;
+        height: 4px;
+        background-color: $buttonColor;
+        position: absolute;
+        top: 13px;
+        left: 0;
+      }
+    }
+  }
+
+  &__article {
+    padding: 24px 20px 26px 0;
+    border-top: 2px solid $blogBorder;
+    border-bottom: 2px solid $blogBorder;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 67px;
+    @include _768{
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__autor {
+    display: flex;
+    column-gap: 28px;
+    align-items: center;
+  }
+
+  &__autor-name {
+    display: block;
+    @extend %rubik-500;
+    font-size: 18px;
+    line-height: 1.3;
+    color: $favoritesTitle;
+  }
+
+  &__autor-position {
+    @extend %rubik-400;
+    color: $blogAutor;
+  }
+
+  &__contacts {
+    display: flex;
+    column-gap: 21px;
+  }
+
+  &__contacts-title {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      @extend %rubik-400;
+      color: $favoritesTitle;
+    }
+  }
+
+  &__tags {
+    @extend %rubik-400;
+    line-height: 1.6;
+    color: $socialText;
+
+  }
+
+  &__social-list {
+    display: flex;
+    column-gap: 20px;
+  }
+
+  &__social-link {
+    svg {
+      width: 15px;
+      height: 13px;
+      fill: $socialColor;
+    }
+  }
+}
+
+.blog-card {
+  margin-bottom: 64px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    margin-bottom: 46px;
+    flex-wrap: wrap
+  }
+
+  &__content {
+    @extend %rubik-400;
+    color: $portfolio-subtitle;
+  }
+
+  &__title {
+    @extend %rubik-500;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+}
+
+.comments {
+  &__inner {
+    display: flex;
+    column-gap: 32px;
+    position: relative;
+
+    @include _768 {
+      flex-wrap: wrap;
+    }
+
+  }
+
+  &__img {
+    width: 100px;
+    height: 100px;
+
+    @include _768 {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+&__title{
+      @extend %rubik-700;
+      font-size: 24px;
+      line-height: 1.5;
+      color: $menu;
+      margin-bottom: 61px;
+      @include _768{
+        margin-bottom: 30px;
+      }
+}
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 29px;
+  }
+
+  &__autor {
+    @extend %rubik-700;
+    line-height: 1.2;
+    color: $menu;
+  }
+
+  &__time {
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 1.2;
+    color: $commentsData;
+  }
+
+  &__bottom {
+    p {
+      @extend %rubik-400;
+      color: $portfolio-subtitle;
+      margin-bottom: 26px;
+    }
+
+    &--line {
+      border-bottom: 1px solid $article-line;
+      padding-bottom: 30px;
+      margin-bottom: 32px;
+    }
+
+    &--without {
+      margin-bottom: 61px;
+    }
+  }
+
+  &__reply {
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 1.2;
+    color: $commentsArrow;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    svg {
+      width: 16px;
+      height: 13px;
+      fill: $commentsArrow
+    }
+  }
+
+  &__posts-title {
+    @extend %rubik-700;
+    font-size: 24px;
+    line-height: 1.2;
+    color: $menu;
+    margin-bottom: 50px;
+  }
+
+  &__form-inner {
+    display: flex;
+    margin-bottom: 20px;
+
+    @include _768 {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__form-input {
+    width: 50%;
+
+    @include _768 {
+      width: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @include _768 {
+        margin: 0 0 30px 0;
+      }
+    }
+  }
+
+  &__form-input,
+  &__form-area {
+    @extend %rubik-700;
+    font-size: 16px;
+    line-height: 2.3;
+    color: $socialText;
+    border: 1px solid $commentsData;
+    padding: 20px;
+  }
+
+  &__form-area {
+    min-height: 120px;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  &__form {
+    margin-bottom: 120px;
+    position: relative;
+  }
+
+  &__label {
+    position: absolute;
+    right: 15px;
+    top: 24px;
+
+    &--name {
+      left: 44%;
+
+      @include _1200 {
+        left: 43%;
+      }
+
+      @include _992 {
+        left: 40%;
+      }
+
+      @include _768 {
+        left: 94%;
+      }
+
+      @include _768 {
+        left: 92%;
+      }
+    }
+
+    &--email {
+      @include _768 {
+        top: 120px;
+      }
+    }
+
+    &--area {
+      top: 132px;
+
+      @include _768 {
+        top: 223px;
+      }
+    }
+
+    svg {
+      width: 18px;
+      height: 14px;
+    }
+  }
+
+  &__form-btn {
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    padding: 19px 35px;
+    color: $backgroundColor;
+    background-color: $buttonColor;
+    letter-spacing: 0.1em;
+  }
+}
